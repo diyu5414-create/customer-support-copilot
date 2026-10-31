@@ -90,7 +90,7 @@ customer_support_copilot/
 ├── demo_output.txt
 ├── report.pdf
 ├── requirements.txt
-├── .env.example
+├── .env
 ├── .gitignore
 └── README.md
 ```
