@@ -1,0 +1,1573 @@
+{
+  "judge_model": "gpt-6.1-sol",
+  "evaluation_method": "Mentor-style LLM-as-Judge; no RAGAS",
+  "metrics": [
+    "Faithfulness",
+    "Answer Correctness",
+    "Refusal Accuracy"
+  ],
+  "versions": {
+    "v1_basic_rag": {
+      "questions": [
+        {
+          "id": "Q01",
+          "question": "Can I return an opened laptop on day 8 if I have the original box and all accessories?",
+          "answer": "Yes. Day 8 is within the 10-day return window. The laptop must also be in good condition with no physical damage, and include the manuals and invoice, as well as the original box and all accessories. [RR-002]\n\nThe 10-day return window is effective from 1 July 2026. [RR-001]",
+          "reference_answer": "Yes. Under the current policy effective 1 July 2026, opened laptops can be returned within 10 days of delivery if they are in good condition and include the original box, all accessories, manuals and the invoice. An older 2025 ticket mentions a 7-day window, but the current policy replaces it.",
+          "retrieved_document_ids": [
+            "RR-002",
+            "TCK-1003",
+            "TCK-1014",
+            "RR-001",
+            "OG-006"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q02",
+          "question": "My Galaxy Buds3 Pro left earbud won't connect. Is this a known issue, and has the same problem been resolved for another customer? What fixed it?",
+          "answer": "Yes. A left Galaxy Buds3 Pro earbud failing to connect after pairing with a new phone is a known issue (KI-001). In another customer’s case, the earbuds were still paired with the old phone; resetting them and pairing again as a new device fixed it (TCK-1001).\n\nTo try it: put both earbuds in the case, close the lid for 10 seconds, then reset them using the Galaxy Wearable app or by holding both touchpads for 7 seconds. Pair them again as a new device (KI-001).",
+          "reference_answer": "Yes, it is a known issue, usually after pairing with a new phone. Put both earbuds in the case and close the lid for 10 seconds, then reset them from the Galaxy Wearable app or hold both touchpads for 7 seconds and pair again as a new device. A previous customer had the same problem after switching phones (TCK-1001); resetting and pairing again as a new device fixed it. If it still does not work, treat it as defective within 48 hours of delivery or raise a warranty claim.",
+          "retrieved_document_ids": [
+            "TCK-1001",
+            "KI-001",
+            "FAQ-011",
+            "KI-002",
+            "FAQ-009"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q03",
+          "question": "How long does delivery take to a remote pincode, and is it free?",
+          "answer": "Delivery to a remote pincode takes 5 to 9 business days. Orders of Rs 499 or above are free; orders below Rs 499 have the normal delivery charge. [SH-002] [SH-001]",
+          "reference_answer": "Delivery to remote pincodes takes 5 to 9 business days. Normal delivery charges apply, so orders of Rs 499 and above are still eligible for free delivery. Express delivery is not available for remote pincodes.",
+          "retrieved_document_ids": [
+            "SH-002",
+            "SH-001",
+            "TCK-1005",
+            "SH-004",
+            "SH-003"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q04",
+          "question": "A customer wants to change the address after the order shipped. What is the official process, and do we have a resolved case like this?",
+          "answer": "After an order has shipped, Dandes Electronics and support cannot change its delivery address. The customer can ask the courier to reschedule delivery to the same address, or refuse the delivery and place a new order with the correct address. A refund for a refused delivery follows policy SH-005. [OG-002]\n\nYes. In resolved case TCK-1004, the customer refused delivery, placed a new order with the correct address, and received a refund for the first order after it reached the warehouse. [TCK-1004]",
+          "reference_answer": "The address cannot be changed after shipping. The customer can ask the courier to reschedule delivery to the same address or refuse delivery and place a new order with the correct address. In resolved case TCK-1004, a customer refused delivery of a shipped Sony WH-1000XM5 order and placed a new order at the new address. The first order was refunded after the package reached the warehouse.",
+          "retrieved_document_ids": [
+            "TCK-1004",
+            "OG-002",
+            "OG-005",
+            "OG-003",
+            "OG-001"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q05",
+          "question": "What does policy RR-004 say?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "Refunds start after the returned product passes the quality check. UPI and wallet refunds take 1 to 3 business days. Credit or debit card and net banking refunds take 5 to 7 business days. Cash on Delivery refunds are sent to the customer's bank account within 5 to 7 business days after bank details are added on the Orders page. EMI refunds go to the card, and the bank closes the EMI plan.",
+          "retrieved_document_ids": [
+            "RR-005",
+            "RR-003",
+            "RR-001",
+            "OG-005",
+            "RR-002"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": true,
+            "status": "False Refusal",
+            "correct": false
+          }
+        },
+        {
+          "id": "Q06",
+          "question": "A customer received a damaged phone and wants a refund instead of a replacement. What is the official process, and do we have a previous resolved case where a refund was issued?",
+          "answer": "Report the damage through **Orders → Report a Problem within 48 hours of delivery**. Upload photos of the phone and box, plus an unboxing video if available. A pickup and quality check follow. For phones, a replacement is the first option; a refund is issued only if a replacement unit is unavailable (RR-003, OG-005).\n\nYes. In resolved case **TCK-1002**, an iPhone 16 arrived with a cracked screen. After pickup and quality check, a refund was issued because a replacement in the same colour was unavailable. (TCK-1002)",
+          "reference_answer": "Report the damage within 48 hours of delivery using Report a Problem on the Orders page. Provide photos of the phone and box, plus an unboxing video if available. After pickup and a quality check, a replacement is generally provided first; a refund is available if a replacement unit is unavailable. In resolved case TCK-1002, an iPhone 16 arrived with a cracked screen. The same-colour replacement was unavailable after pickup and quality check, so a full refund was issued to the customer's credit card.",
+          "retrieved_document_ids": [
+            "TCK-1002",
+            "RR-003",
+            "TCK-1006",
+            "OG-005",
+            "TCK-1011"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q07",
+          "question": "Do you sell refrigerators?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [
+            "RR-002",
+            "FAQ-002",
+            "RR-001",
+            "FAQ-007",
+            "OG-006"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q08",
+          "question": "Can I use Cash on Delivery for a Rs 60,000 laptop?",
+          "answer": "No. Orders above Rs 50,000 must be paid online, so Cash on Delivery isn’t available for a Rs 60,000 laptop. [SH-004]",
+          "reference_answer": "No. Cash on Delivery is only available for orders up to Rs 50,000.",
+          "retrieved_document_ids": [
+            "SH-004",
+            "TCK-1012",
+            "SH-003",
+            "TCK-1003",
+            "RR-002"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q09",
+          "question": "What should a customer do if their Galaxy Buds3 Pro left earbud will not connect after pairing with a new phone?",
+          "answer": "Put both earbuds in the case, close the lid for 10 seconds, then reset them using the Galaxy Wearable app or by holding both touchpads for 7 seconds. Pair them again as a new device. If the issue continues, treat it as defective under RR-003 within 48 hours of delivery, or submit a warranty claim after that. [KI-001]",
+          "reference_answer": "Put both earbuds in the case and close the lid for 10 seconds. Reset the earbuds in the Galaxy Wearable app or hold both touchpads for 7 seconds, then pair them again as a new device.",
+          "retrieved_document_ids": [
+            "TCK-1001",
+            "KI-001",
+            "FAQ-011",
+            "KI-002",
+            "FAQ-009"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q10",
+          "question": "How can a customer track a shipped order, and when should support escalate a tracking delay?",
+          "answer": "Customers can track a shipped order from the Orders page or use the tracking link sent by SMS or email. Updates may take up to 24 hours to appear. Support should raise a courier escalation if tracking has not updated for more than 3 business days. [OG-003]",
+          "reference_answer": "Track the order from the Orders page or through the tracking link sent by SMS or email. Updates can take up to 24 hours to appear. If tracking has not updated for more than 3 business days, support should raise a courier escalation.",
+          "retrieved_document_ids": [
+            "OG-003",
+            "TCK-1013",
+            "OG-005",
+            "TCK-1005",
+            "TCK-1004"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q11",
+          "question": "Can a customer cancel an order after it has shipped, and how is a prepaid order refunded if delivery is refused?",
+          "answer": "No. Once an order has shipped, it cannot be cancelled; the customer can refuse delivery instead [OG-001]. If a prepaid order is refused, it is returned to Dandes Electronics and a full refund is issued once it reaches the warehouse [SH-005]. Refund processing starts after the returned product passes quality check, and the timeline depends on the payment method [RR-004].",
+          "reference_answer": "An order cannot be cancelled after shipping. The customer can refuse delivery instead. For a prepaid order, a full refund is issued after the package returns to the warehouse.",
+          "retrieved_document_ids": [
+            "OG-001",
+            "SH-005",
+            "OG-002",
+            "TCK-1004",
+            "RR-004"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q12",
+          "question": "How long does a UPI refund take after a returned product passes the quality check?",
+          "answer": "UPI refunds take 1 to 3 business days after the returned product passes the quality check. [RR-004]",
+          "reference_answer": "A UPI refund takes 1 to 3 business days after the returned product passes the quality check.",
+          "retrieved_document_ids": [
+            "RR-004",
+            "RR-003",
+            "OG-005",
+            "RR-001",
+            "RR-002"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q13",
+          "question": "A customer received a damaged item. How should they report it, and what evidence is required?",
+          "answer": "Report it within 48 hours of delivery by opening the order on the Orders page and selecting **Report a Problem**. Upload photos of the product, the box, and the shipping label; include an unboxing video if available. [OG-005, RR-003]",
+          "reference_answer": "Open the order on the Orders page and select Report a Problem within 48 hours of delivery. Upload photos of the product, box and shipping label, and an unboxing video if available. Pickup and a quality check follow.",
+          "retrieved_document_ids": [
+            "OG-005",
+            "RR-003",
+            "TCK-1002",
+            "TCK-1007",
+            "OG-006"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q14",
+          "question": "What happens if a courier makes three unsuccessful delivery attempts or the customer refuses the package?",
+          "answer": "After three failed delivery attempts, or if you refuse the package, it is returned to Dandes Electronics. Prepaid orders are fully refunded once the package reaches the warehouse; Cash on Delivery orders are cancelled. [SH-005]",
+          "reference_answer": "The package is returned to Dandes Electronics. For prepaid orders, a full refund is issued after the package reaches the warehouse. Cash on Delivery orders are cancelled.",
+          "retrieved_document_ids": [
+            "SH-005",
+            "OG-002",
+            "RR-003",
+            "OG-005",
+            "OG-003"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q15",
+          "question": "What should a customer do if a product develops a defect after the return window has ended?",
+          "answer": "After the return window ends, the defect is covered by the manufacturer’s warranty. Download the invoice from the Orders page and visit the brand’s authorised service centre, or book an onsite visit if the product has onsite warranty. Dandes Electronics does not repair products directly. (OG-006; RR-001, effective 1 July 2026)",
+          "reference_answer": "After the return window ends, the customer must use the manufacturer's warranty.",
+          "retrieved_document_ids": [
+            "RR-003",
+            "OG-005",
+            "OG-006",
+            "RR-001",
+            "TCK-1003"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q16",
+          "question": "Do you sell televisions?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [
+            "FAQ-002",
+            "FAQ-007",
+            "RR-001",
+            "RR-002",
+            "FAQ-004"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q17",
+          "question": "What is the known issue with AirPods Pro 2, and what troubleshooting guidance is available?",
+          "answer": "Some customers report that one AirPods Pro 2 earbud does not charge in the case, usually because the charging contacts are dirty. Gently clean the earbud and case contacts with a dry cotton swab, and check that the earbud sits fully in the case. If it still won’t charge, raise an Apple warranty claim. [KI-002]",
+          "reference_answer": "Some AirPods Pro 2 earbuds may not charge in the case because of dirt on the charging contacts. Gently clean the earbud and case contacts with a dry cotton swab and check that the earbud sits fully in the case. If it still does not charge, raise an Apple warranty claim.",
+          "retrieved_document_ids": [
+            "FAQ-009",
+            "KI-002",
+            "KI-001",
+            "TCK-1001",
+            "FAQ-011"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q18",
+          "question": "Has another customer experienced the Galaxy Buds3 Pro left earbud connection problem, and how was it resolved?",
+          "answer": "Yes. In case TCK-1001, the left earbud was still paired with the customer’s old phone. They reset the earbuds in the case and paired them again as a new device; afterward, both earbuds worked. (TCK-1001, KI-001)",
+          "reference_answer": "Yes. Resolved case TCK-1001 describes the same issue after switching phones. Resetting the earbuds and pairing them again as a new device fixed the problem.",
+          "retrieved_document_ids": [
+            "TCK-1001",
+            "KI-001",
+            "FAQ-011",
+            "KI-002",
+            "TCK-1011"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q19",
+          "question": "Do you sell washing machines?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [
+            "OG-006",
+            "FAQ-002",
+            "FAQ-004",
+            "KI-008",
+            "FAQ-007"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q20",
+          "question": "Does Dandes Electronics sell microwaves?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [
+            "FAQ-002",
+            "RR-001",
+            "FAQ-007",
+            "SH-005",
+            "FAQ-006"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        }
+      ],
+      "summary": {
+        "total_questions": 20,
+        "faithfulness": {
+          "faithful": 15,
+          "partial": 0,
+          "unfaithful": 0,
+          "evaluated": 15,
+          "faithful_percentage": 100.0
+        },
+        "answer_correctness": {
+          "correct": 13,
+          "partially_correct": 2,
+          "incorrect": 0,
+          "evaluated": 15,
+          "correct_percentage": 86.67
+        },
+        "refusal_accuracy": {
+          "correct": 19,
+          "incorrect": 1,
+          "evaluated": 20,
+          "accuracy_percentage": 95.0,
+          "false_refusals": 1,
+          "should_have_refused": 0
+        }
+      }
+    },
+    "v2_single_index_rag": {
+      "questions": [
+        {
+          "id": "Q01",
+          "question": "Can I return an opened laptop on day 8 if I have the original box and all accessories?",
+          "answer": "Yes. Under the policy effective 1 July 2026, opened laptops can be returned within 10 days of delivery. The laptop must be in good condition with no physical damage and include the original box, all accessories, manuals, and the invoice. [RR-001] [RR-002]",
+          "reference_answer": "Yes. Under the current policy effective 1 July 2026, opened laptops can be returned within 10 days of delivery if they are in good condition and include the original box, all accessories, manuals and the invoice. An older 2025 ticket mentions a 7-day window, but the current policy replaces it.",
+          "retrieved_document_ids": [
+            "TCK-1014",
+            "RR-002",
+            "TCK-1003",
+            "RR-001",
+            "RR-003"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q02",
+          "question": "My Galaxy Buds3 Pro left earbud won't connect. Is this a known issue, and has the same problem been resolved for another customer? What fixed it?",
+          "answer": "Yes. This is a known issue that can happen after pairing the Galaxy Buds3 Pro with a new phone [KI-001]. It was resolved for another customer: both earbuds worked after they reset them and paired them again as a new device [TCK-1001].\n\nTo try the fix, put both earbuds in the case, close the lid for 10 seconds, then reset them in the Galaxy Wearable app or by holding both touchpads for 7 seconds. Pair them again as a new device [KI-001].",
+          "reference_answer": "Yes, it is a known issue, usually after pairing with a new phone. Put both earbuds in the case and close the lid for 10 seconds, then reset them from the Galaxy Wearable app or hold both touchpads for 7 seconds and pair again as a new device. A previous customer had the same problem after switching phones (TCK-1001); resetting and pairing again as a new device fixed it. If it still does not work, treat it as defective within 48 hours of delivery or raise a warranty claim.",
+          "retrieved_document_ids": [
+            "TCK-1001",
+            "KI-001",
+            "FAQ-011",
+            "KI-002",
+            "TCK-1011"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q03",
+          "question": "How long does delivery take to a remote pincode, and is it free?",
+          "answer": "Delivery to a remote pincode takes **5 to 9 business days**. Normal delivery charges apply: orders of **Rs 499 or more are free**, and orders below Rs 499 have a **Rs 49 delivery charge**. This policy is effective **1 July 2026**. [SH-002] [SH-001]",
+          "reference_answer": "Delivery to remote pincodes takes 5 to 9 business days. Normal delivery charges apply, so orders of Rs 499 and above are still eligible for free delivery. Express delivery is not available for remote pincodes.",
+          "retrieved_document_ids": [
+            "SH-002",
+            "TCK-1005",
+            "SH-001",
+            "SH-004",
+            "FAQ-007"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q04",
+          "question": "A customer wants to change the address after the order shipped. What is the official process, and do we have a resolved case like this?",
+          "answer": "After an order ships, Dandes Electronics cannot change its delivery address. The customer can ask the courier to reschedule delivery to the same address, or refuse the delivery and place a new order with the correct address. A refund after refusal follows policy SH-005. [OG-002]\n\nYes. In a resolved case involving a shipped Sony WH-1000XM5 order, the customer refused delivery and placed a new order with the updated address; the first order was refunded after the package reached the warehouse. [TCK-1004]",
+          "reference_answer": "The address cannot be changed after shipping. The customer can ask the courier to reschedule delivery to the same address or refuse delivery and place a new order with the correct address. In resolved case TCK-1004, a customer refused delivery of a shipped Sony WH-1000XM5 order and placed a new order at the new address. The first order was refunded after the package reached the warehouse.",
+          "retrieved_document_ids": [
+            "TCK-1004",
+            "OG-002",
+            "OG-001",
+            "OG-003",
+            "OG-005"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q05",
+          "question": "What does policy RR-004 say?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "Refunds start after the returned product passes the quality check. UPI and wallet refunds take 1 to 3 business days. Credit or debit card and net banking refunds take 5 to 7 business days. Cash on Delivery refunds are sent to the customer's bank account within 5 to 7 business days after bank details are added on the Orders page. EMI refunds go to the card, and the bank closes the EMI plan.",
+          "retrieved_document_ids": [
+            "OG-001",
+            "RR-001",
+            "RR-003",
+            "RR-005",
+            "TCK-1011"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": true,
+            "status": "False Refusal",
+            "correct": false
+          }
+        },
+        {
+          "id": "Q06",
+          "question": "A customer received a damaged phone and wants a refund instead of a replacement. What is the official process, and do we have a previous resolved case where a refund was issued?",
+          "answer": "The official process, under the policy effective **1 July 2026**, is to report the damage through **Report a Problem** on the Orders page within **48 hours of delivery**. Upload photos of the phone, box and shipping label; include an unboxing video if available. A pickup is scheduled within 2 business days, followed by a quality check. [RR-003] [OG-005]\n\nFor a damaged phone, a refund is available only if a replacement unit is not available. Replacement rules specify the same model and colour; if the same model is out of stock, the customer can choose a refund or a different colour of that model. [RR-003] [RR-005]\n\nYes. In a resolved iPhone 16 case, the customer reported transit damage within 48 hours and provided photos and an unboxing video. After pickup and quality check, a refund was issued because a replacement in the same colour was unavailable. [TCK-1002]",
+          "reference_answer": "Report the damage within 48 hours of delivery using Report a Problem on the Orders page. Provide photos of the phone and box, plus an unboxing video if available. After pickup and a quality check, a replacement is generally provided first; a refund is available if a replacement unit is unavailable. In resolved case TCK-1002, an iPhone 16 arrived with a cracked screen. The same-colour replacement was unavailable after pickup and quality check, so a full refund was issued to the customer's credit card.",
+          "retrieved_document_ids": [
+            "TCK-1002",
+            "RR-003",
+            "RR-005",
+            "TCK-1011",
+            "OG-005"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q07",
+          "question": "Do you sell refrigerators?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [
+            "FAQ-002",
+            "FAQ-006",
+            "RR-002",
+            "FAQ-004",
+            "FAQ-005"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q08",
+          "question": "Can I use Cash on Delivery for a Rs 60,000 laptop?",
+          "answer": "No. Cash on Delivery is available only for orders up to Rs 50,000, so a Rs 60,000 laptop must be paid for online. This policy is dated 1 July 2026. [SH-004]",
+          "reference_answer": "No. Cash on Delivery is only available for orders up to Rs 50,000.",
+          "retrieved_document_ids": [
+            "SH-004",
+            "SH-003",
+            "TCK-1012",
+            "SH-005",
+            "TCK-1006"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q09",
+          "question": "What should a customer do if their Galaxy Buds3 Pro left earbud will not connect after pairing with a new phone?",
+          "answer": "Put both earbuds in the case, close the lid for 10 seconds, then reset them using the Galaxy Wearable app or by holding both touchpads for 7 seconds. Pair them again as a new device. If the left earbud still will not connect, treat it as defective within 48 hours of delivery, or as a warranty claim after that. [KI-001]",
+          "reference_answer": "Put both earbuds in the case and close the lid for 10 seconds. Reset the earbuds in the Galaxy Wearable app or hold both touchpads for 7 seconds, then pair them again as a new device.",
+          "retrieved_document_ids": [
+            "KI-001",
+            "TCK-1001",
+            "FAQ-011",
+            "KI-002",
+            "FAQ-009"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q10",
+          "question": "How can a customer track a shipped order, and when should support escalate a tracking delay?",
+          "answer": "Customers can track a shipped order from the Orders page or use the tracking link sent by SMS and email. Updates may take up to 24 hours after shipping to appear. If tracking has not updated for more than 3 business days, support should raise a courier escalation. [OG-003]",
+          "reference_answer": "Track the order from the Orders page or through the tracking link sent by SMS or email. Updates can take up to 24 hours to appear. If tracking has not updated for more than 3 business days, support should raise a courier escalation.",
+          "retrieved_document_ids": [
+            "OG-003",
+            "TCK-1013",
+            "OG-005",
+            "OG-001",
+            "OG-002"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q11",
+          "question": "Can a customer cancel an order after it has shipped, and how is a prepaid order refunded if delivery is refused?",
+          "answer": "Once an order has shipped, it cannot be cancelled. The customer can refuse delivery instead. For a prepaid order, a full refund is issued once the package reaches the warehouse. [OG-001] [SH-005]",
+          "reference_answer": "An order cannot be cancelled after shipping. The customer can refuse delivery instead. For a prepaid order, a full refund is issued after the package returns to the warehouse.",
+          "retrieved_document_ids": [
+            "OG-001",
+            "SH-005",
+            "OG-002",
+            "TCK-1004",
+            "RR-003"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q12",
+          "question": "How long does a UPI refund take after a returned product passes the quality check?",
+          "answer": "UPI refunds take 1 to 3 business days after the returned product passes the quality check. [RR-004]",
+          "reference_answer": "A UPI refund takes 1 to 3 business days after the returned product passes the quality check.",
+          "retrieved_document_ids": [
+            "RR-004",
+            "OG-005",
+            "RR-003",
+            "TCK-1011",
+            "TCK-1014"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q13",
+          "question": "A customer received a damaged item. How should they report it, and what evidence is required?",
+          "answer": "Report the damage within 48 hours of delivery by opening the order on the Orders page and selecting **Report a Problem**. Upload photos of the product and box, plus a photo of the shipping label; include an unboxing video if available. [OG-005] [RR-003]",
+          "reference_answer": "Open the order on the Orders page and select Report a Problem within 48 hours of delivery. Upload photos of the product, box and shipping label, and an unboxing video if available. Pickup and a quality check follow.",
+          "retrieved_document_ids": [
+            "OG-005",
+            "RR-003",
+            "TCK-1002",
+            "TCK-1007",
+            "OG-006"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q14",
+          "question": "What happens if a courier makes three unsuccessful delivery attempts or the customer refuses the package?",
+          "answer": "After three unsuccessful delivery attempts, the package is returned to Dandes Electronics. If you refuse the package, it is also returned. For prepaid orders, a full refund is issued once the package reaches the warehouse; Cash on Delivery orders are cancelled. [SH-005]",
+          "reference_answer": "The package is returned to Dandes Electronics. For prepaid orders, a full refund is issued after the package reaches the warehouse. Cash on Delivery orders are cancelled.",
+          "retrieved_document_ids": [
+            "SH-005",
+            "OG-002",
+            "TCK-1004",
+            "TCK-1013",
+            "OG-004"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q15",
+          "question": "What should a customer do if a product develops a defect after the return window has ended?",
+          "answer": "After the return window ends, defects are covered by the manufacturer warranty under the policy effective 1 July 2026. Download the invoice from the Orders page and visit the brand’s authorised service centre, or book an onsite visit if the product has onsite warranty. Dandes Electronics does not repair products directly. [RR-001] [OG-006]",
+          "reference_answer": "After the return window ends, the customer must use the manufacturer's warranty.",
+          "retrieved_document_ids": [
+            "OG-006",
+            "RR-001",
+            "RR-003",
+            "OG-005",
+            "RR-005"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q16",
+          "question": "Do you sell televisions?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [
+            "FAQ-002",
+            "FAQ-006",
+            "FAQ-004",
+            "FAQ-008",
+            "FAQ-007"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q17",
+          "question": "What is the known issue with AirPods Pro 2, and what troubleshooting guidance is available?",
+          "answer": "The known issue is that one AirPods Pro 2 earbud may not charge in its case, often because the charging contacts are dirty. Gently clean the earbud and case contacts with a dry cotton swab, then check that the earbud sits fully in the case. If it still won’t charge, raise an Apple warranty claim. [KI-002]",
+          "reference_answer": "Some AirPods Pro 2 earbuds may not charge in the case because of dirt on the charging contacts. Gently clean the earbud and case contacts with a dry cotton swab and check that the earbud sits fully in the case. If it still does not charge, raise an Apple warranty claim.",
+          "retrieved_document_ids": [
+            "KI-002",
+            "FAQ-009",
+            "TCK-1001",
+            "KI-001",
+            "RR-003"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q18",
+          "question": "Has another customer experienced the Galaxy Buds3 Pro left earbud connection problem, and how was it resolved?",
+          "answer": "Yes. A customer had the same issue after switching to a new phone because the earbuds were still paired with the old phone. They reset the earbuds and paired them again as a new device, and both earbuds worked afterward [TCK-1001]. The reset steps are to put both earbuds in the case, close the lid for 10 seconds, reset them through the Galaxy Wearable app or by holding both touchpads for 7 seconds, then pair again as a new device [KI-001].",
+          "reference_answer": "Yes. Resolved case TCK-1001 describes the same issue after switching phones. Resetting the earbuds and pairing them again as a new device fixed the problem.",
+          "retrieved_document_ids": [
+            "TCK-1001",
+            "KI-001",
+            "FAQ-011",
+            "TCK-1011",
+            "KI-002"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q19",
+          "question": "Do you sell washing machines?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [
+            "FAQ-002",
+            "RR-003",
+            "RR-001",
+            "FAQ-008",
+            "RR-002"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q20",
+          "question": "Does Dandes Electronics sell microwaves?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [
+            "FAQ-002",
+            "FAQ-008",
+            "FAQ-006",
+            "FAQ-004",
+            "FAQ-007"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        }
+      ],
+      "summary": {
+        "total_questions": 20,
+        "faithfulness": {
+          "faithful": 12,
+          "partial": 3,
+          "unfaithful": 0,
+          "evaluated": 15,
+          "faithful_percentage": 80.0
+        },
+        "answer_correctness": {
+          "correct": 11,
+          "partially_correct": 4,
+          "incorrect": 0,
+          "evaluated": 15,
+          "correct_percentage": 73.33
+        },
+        "refusal_accuracy": {
+          "correct": 19,
+          "incorrect": 1,
+          "evaluated": 20,
+          "accuracy_percentage": 95.0,
+          "false_refusals": 1,
+          "should_have_refused": 0
+        }
+      }
+    },
+    "v2_multi_index_rag": {
+      "questions": [
+        {
+          "id": "Q01",
+          "question": "Can I return an opened laptop on day 8 if I have the original box and all accessories?",
+          "answer": "Yes. Under the return policy effective 1 July 2026, opened laptops can be returned within 10 days of delivery, so day 8 is within the return window. The laptop must be in good condition, have no physical damage, and be returned with the original box, all accessories, manuals, and the invoice.",
+          "reference_answer": "Yes. Under the current policy effective 1 July 2026, opened laptops can be returned within 10 days of delivery if they are in good condition and include the original box, all accessories, manuals and the invoice. An older 2025 ticket mentions a 7-day window, but the current policy replaces it.",
+          "retrieved_document_ids": [
+            "RR-002",
+            "RR-001",
+            "RR-003",
+            "RR-005",
+            "RR-004"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q02",
+          "question": "My Galaxy Buds3 Pro left earbud won't connect. Is this a known issue, and has the same problem been resolved for another customer? What fixed it?",
+          "answer": "Yes. The 1 July 2026 known-issue guidance says one Galaxy Buds3 Pro earbud—usually the left—may fail to connect after pairing with a new phone.\n\nTry this fix: put both earbuds in the case, close the lid for 10 seconds, then reset them using the Galaxy Wearable app or by holding both touchpads for 7 seconds. Pair them again as a new device.\n\nThis was resolved for another customer who had switched phones: the earbuds were still paired with the old phone, and resetting them and pairing again fixed the issue. If yours still won’t connect after the reset, the guidance says to treat it as defective under RR-003 if it’s within 48 hours of delivery, or as a warranty claim after that.",
+          "reference_answer": "Yes, it is a known issue, usually after pairing with a new phone. Put both earbuds in the case and close the lid for 10 seconds, then reset them from the Galaxy Wearable app or hold both touchpads for 7 seconds and pair again as a new device. A previous customer had the same problem after switching phones (TCK-1001); resetting and pairing again as a new device fixed it. If it still does not work, treat it as defective within 48 hours of delivery or raise a warranty claim.",
+          "retrieved_document_ids": [
+            "TCK-1001",
+            "KI-001",
+            "FAQ-011",
+            "KI-002",
+            "TCK-1011"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q03",
+          "question": "How long does delivery take to a remote pincode, and is it free?",
+          "answer": "For a remote pincode, delivery takes **5–9 business days**. Delivery is free for orders of **Rs 499 or more**; orders below Rs 499 have a **Rs 49** delivery charge. This policy is effective from 1 July 2026.",
+          "reference_answer": "Delivery to remote pincodes takes 5 to 9 business days. Normal delivery charges apply, so orders of Rs 499 and above are still eligible for free delivery. Express delivery is not available for remote pincodes.",
+          "retrieved_document_ids": [
+            "SH-002",
+            "SH-001",
+            "SH-004",
+            "RR-001",
+            "RR-003"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q04",
+          "question": "A customer wants to change the address after the order shipped. What is the official process, and do we have a resolved case like this?",
+          "answer": "Once an order has shipped, Dandes Electronics cannot change the delivery address. The customer can ask the courier to reschedule delivery to the same address, or refuse the delivery and place a new order with the correct address. If they refuse delivery, the refund is processed under policy SH-005.\n\nA resolved case is documented for a shipped Sony WH-1000XM5 order: the customer refused delivery, placed a new order with the correct address, and received a refund for the first order after the package reached the warehouse.",
+          "reference_answer": "The address cannot be changed after shipping. The customer can ask the courier to reschedule delivery to the same address or refuse delivery and place a new order with the correct address. In resolved case TCK-1004, a customer refused delivery of a shipped Sony WH-1000XM5 order and placed a new order at the new address. The first order was refunded after the package reached the warehouse.",
+          "retrieved_document_ids": [
+            "OG-002",
+            "TCK-1004",
+            "OG-001",
+            "OG-003",
+            "OG-005"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q05",
+          "question": "What does policy RR-004 say?",
+          "answer": "Policy RR-004, effective 1 July 2026, explains refund timelines. Refunds begin after the returned product passes the quality check:\n\n- UPI and wallet: 1–3 business days.\n- Credit or debit card and net banking: 5–7 business days.\n- Cash on Delivery: 5–7 business days after you add bank details on the Orders page.\n- EMI: refunded to the card, and the bank closes the EMI plan.",
+          "reference_answer": "Refunds start after the returned product passes the quality check. UPI and wallet refunds take 1 to 3 business days. Credit or debit card and net banking refunds take 5 to 7 business days. Cash on Delivery refunds are sent to the customer's bank account within 5 to 7 business days after bank details are added on the Orders page. EMI refunds go to the card, and the bank closes the EMI plan.",
+          "retrieved_document_ids": [
+            "RR-003",
+            "RR-005",
+            "RR-002",
+            "RR-004",
+            "RR-001"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q06",
+          "question": "A customer received a damaged phone and wants a refund instead of a replacement. What is the official process, and do we have a previous resolved case where a refund was issued?",
+          "answer": "Under the damaged-product policy effective 1 July 2026, report the damage within 48 hours of delivery using **Report a Problem** on the Orders page. Provide photos of the phone and box, plus an unboxing video if available. The phone will be picked up for a quality check. For mobile phones, a refund is available only if a replacement unit is unavailable. RR-005 also says that if the same model is out of stock, the customer may choose a refund or a different colour of that model.\n\nYes. In resolved case **TCK-1002** (11 August 2026), an iPhone 16 arrived with a cracked screen. The customer reported it within 48 hours and provided photos and an unboxing video; after pickup and quality check, a refund was issued because a replacement in the same colour was unavailable.",
+          "reference_answer": "Report the damage within 48 hours of delivery using Report a Problem on the Orders page. Provide photos of the phone and box, plus an unboxing video if available. After pickup and a quality check, a replacement is generally provided first; a refund is available if a replacement unit is unavailable. In resolved case TCK-1002, an iPhone 16 arrived with a cracked screen. The same-colour replacement was unavailable after pickup and quality check, so a full refund was issued to the customer's credit card.",
+          "retrieved_document_ids": [
+            "TCK-1002",
+            "RR-003",
+            "TCK-1011",
+            "RR-001",
+            "RR-005"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q07",
+          "question": "Do you sell refrigerators?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q08",
+          "question": "Can I use Cash on Delivery for a Rs 60,000 laptop?",
+          "answer": "No. Cash on Delivery is available only for orders up to Rs 50,000, so a Rs 60,000 laptop must be paid for online. This policy is effective 1 July 2026.",
+          "reference_answer": "No. Cash on Delivery is only available for orders up to Rs 50,000.",
+          "retrieved_document_ids": [
+            "SH-004",
+            "SH-003",
+            "SH-005",
+            "RR-002",
+            "SH-001"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q09",
+          "question": "What should a customer do if their Galaxy Buds3 Pro left earbud will not connect after pairing with a new phone?",
+          "answer": "Put both earbuds in the case, close the lid for 10 seconds, then reset them using the Galaxy Wearable app or by holding both touchpads for 7 seconds. Pair the earbuds again as a new device.\n\nIf the left earbud still won’t connect after the reset, treat it as defective under RR-003 if it’s within 48 hours of delivery; after that, make a warranty claim. The guidance is dated 1 July 2026.",
+          "reference_answer": "Put both earbuds in the case and close the lid for 10 seconds. Reset the earbuds in the Galaxy Wearable app or hold both touchpads for 7 seconds, then pair them again as a new device.",
+          "retrieved_document_ids": [
+            "KI-001",
+            "FAQ-011",
+            "KI-002",
+            "FAQ-009",
+            "KI-005"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q10",
+          "question": "How can a customer track a shipped order, and when should support escalate a tracking delay?",
+          "answer": "After the order ships, track it from the Orders page or use the tracking link sent by SMS or email. Updates may take up to 24 hours to appear. If tracking has not updated for more than 3 business days, support should raise a courier escalation. This guidance is dated 1 July 2026.",
+          "reference_answer": "Track the order from the Orders page or through the tracking link sent by SMS or email. Updates can take up to 24 hours to appear. If tracking has not updated for more than 3 business days, support should raise a courier escalation.",
+          "retrieved_document_ids": [
+            "OG-003",
+            "OG-001",
+            "OG-005",
+            "OG-002",
+            "OG-004"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q11",
+          "question": "Can a customer cancel an order after it has shipped, and how is a prepaid order refunded if delivery is refused?",
+          "answer": "Under the policy effective 1 July 2026, an order cannot be cancelled once it has shipped. You can refuse delivery instead. The courier will return the package to Dandes Electronics, and a prepaid order receives a full refund once the package reaches the warehouse. The policy does not specify how long the refund takes after that.",
+          "reference_answer": "An order cannot be cancelled after shipping. The customer can refuse delivery instead. For a prepaid order, a full refund is issued after the package returns to the warehouse.",
+          "retrieved_document_ids": [
+            "OG-001",
+            "SH-005",
+            "OG-002",
+            "RR-003",
+            "OG-005"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q12",
+          "question": "How long does a UPI refund take after a returned product passes the quality check?",
+          "answer": "After the returned product passes the quality check, a UPI refund takes **1 to 3 business days** to process. This timeline is under the refund policy effective 1 July 2026.",
+          "reference_answer": "A UPI refund takes 1 to 3 business days after the returned product passes the quality check.",
+          "retrieved_document_ids": [
+            "RR-004",
+            "RR-003",
+            "RR-001",
+            "RR-002",
+            "RR-005"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q13",
+          "question": "A customer received a damaged item. How should they report it, and what evidence is required?",
+          "answer": "Report the damage within 48 hours of delivery: open the order on the Orders page and select **Report a Problem**. Upload photos of the item, the box, and the shipping label. An unboxing video is also requested if available. A pickup will be scheduled within 2 business days; after a quality check, a replacement or refund is processed under the applicable policies.",
+          "reference_answer": "Open the order on the Orders page and select Report a Problem within 48 hours of delivery. Upload photos of the product, box and shipping label, and an unboxing video if available. Pickup and a quality check follow.",
+          "retrieved_document_ids": [
+            "OG-005",
+            "OG-004",
+            "OG-006",
+            "OG-003",
+            "OG-001"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q14",
+          "question": "What happens if a courier makes three unsuccessful delivery attempts or the customer refuses the package?",
+          "answer": "The courier will make up to three delivery attempts. If all three fail, or you refuse the package, it will be returned to Dandes Electronics. For a prepaid order, a full refund is issued once the package reaches the warehouse. A Cash on Delivery order is cancelled. This policy is effective 1 July 2026.",
+          "reference_answer": "The package is returned to Dandes Electronics. For prepaid orders, a full refund is issued after the package reaches the warehouse. Cash on Delivery orders are cancelled.",
+          "retrieved_document_ids": [
+            "SH-005",
+            "RR-003",
+            "SH-004",
+            "SH-001",
+            "RR-002"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Partial",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q15",
+          "question": "What should a customer do if a product develops a defect after the return window has ended?",
+          "answer": "Once the return window has ended, the customer must use the manufacturer warranty. The documents don’t specify how to contact the manufacturer or the warranty claim steps, so check the warranty information supplied with the product or contact the manufacturer.",
+          "reference_answer": "After the return window ends, the customer must use the manufacturer's warranty.",
+          "retrieved_document_ids": [
+            "RR-001",
+            "RR-003",
+            "RR-005",
+            "RR-002",
+            "RR-004"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q16",
+          "question": "Do you sell televisions?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q17",
+          "question": "What is the known issue with AirPods Pro 2, and what troubleshooting guidance is available?",
+          "answer": "Some customers report that one AirPods Pro 2 earbud does not charge in its case. Dirt on the charging contacts is the usual cause.\n\nGently clean the earbud and case contacts with a dry cotton swab, and check that the earbud sits fully in the case. If it still does not charge, raise an Apple warranty claim.",
+          "reference_answer": "Some AirPods Pro 2 earbuds may not charge in the case because of dirt on the charging contacts. Gently clean the earbud and case contacts with a dry cotton swab and check that the earbud sits fully in the case. If it still does not charge, raise an Apple warranty claim.",
+          "retrieved_document_ids": [
+            "KI-002",
+            "FAQ-009",
+            "KI-001",
+            "KI-004",
+            "KI-006"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q18",
+          "question": "Has another customer experienced the Galaxy Buds3 Pro left earbud connection problem, and how was it resolved?",
+          "answer": "Yes. A customer had the same issue after switching to a new phone; the earbuds were still paired with the old phone. They put both earbuds in the case, closed the lid for 10 seconds, reset them, then paired them again as a new device. Both earbuds worked afterward.\n\nIf the problem continues after resetting, the guidance is to treat it as defective under RR-003 within 48 hours of delivery, or as a warranty claim after that.",
+          "reference_answer": "Yes. Resolved case TCK-1001 describes the same issue after switching phones. Resetting the earbuds and pairing them again as a new device fixed the problem.",
+          "retrieved_document_ids": [
+            "TCK-1001",
+            "KI-001",
+            "FAQ-011",
+            "TCK-1011",
+            "KI-002"
+          ],
+          "missing_context_ids": [],
+          "faithfulness": "Faithful",
+          "answer_correctness": "Partially Correct",
+          "refusal": {
+            "expected_refusal": false,
+            "actual_refusal": false,
+            "status": "Correctly Answered",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q19",
+          "question": "Do you sell washing machines?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        },
+        {
+          "id": "Q20",
+          "question": "Does Dandes Electronics sell microwaves?",
+          "answer": "I don't know based on the available information.",
+          "reference_answer": "I don't know based on the available information.",
+          "retrieved_document_ids": [],
+          "missing_context_ids": [],
+          "faithfulness": "N/A (refusal)",
+          "answer_correctness": "N/A (refusal)",
+          "refusal": {
+            "expected_refusal": true,
+            "actual_refusal": true,
+            "status": "Correct Refusal",
+            "correct": true
+          }
+        }
+      ],
+      "summary": {
+        "total_questions": 20,
+        "faithfulness": {
+          "faithful": 6,
+          "partial": 10,
+          "unfaithful": 0,
+          "evaluated": 16,
+          "faithful_percentage": 37.5
+        },
+        "answer_correctness": {
+          "correct": 7,
+          "partially_correct": 9,
+          "incorrect": 0,
+          "evaluated": 16,
+          "correct_percentage": 43.75
+        },
+        "refusal_accuracy": {
+          "correct": 20,
+          "incorrect": 0,
+          "evaluated": 20,
+          "accuracy_percentage": 100.0,
+          "false_refusals": 0,
+          "should_have_refused": 0
+        }
+      }
+    }
+  },
+  "failure_report": [
+    {
+      "version": "v1_basic_rag",
+      "id": "Q03",
+      "question": "How long does delivery take to a remote pincode, and is it free?",
+      "reasons": [
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v1_basic_rag",
+      "id": "Q05",
+      "question": "What does policy RR-004 say?",
+      "reasons": [
+        "Refusal issue: False Refusal"
+      ]
+    },
+    {
+      "version": "v1_basic_rag",
+      "id": "Q09",
+      "question": "What should a customer do if their Galaxy Buds3 Pro left earbud will not connect after pairing with a new phone?",
+      "reasons": [
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_single_index_rag",
+      "id": "Q03",
+      "question": "How long does delivery take to a remote pincode, and is it free?",
+      "reasons": [
+        "Faithfulness: Partial",
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_single_index_rag",
+      "id": "Q05",
+      "question": "What does policy RR-004 say?",
+      "reasons": [
+        "Refusal issue: False Refusal"
+      ]
+    },
+    {
+      "version": "v2_single_index_rag",
+      "id": "Q06",
+      "question": "A customer received a damaged phone and wants a refund instead of a replacement. What is the official process, and do we have a previous resolved case where a refund was issued?",
+      "reasons": [
+        "Faithfulness: Partial"
+      ]
+    },
+    {
+      "version": "v2_single_index_rag",
+      "id": "Q08",
+      "question": "Can I use Cash on Delivery for a Rs 60,000 laptop?",
+      "reasons": [
+        "Faithfulness: Partial",
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_single_index_rag",
+      "id": "Q09",
+      "question": "What should a customer do if their Galaxy Buds3 Pro left earbud will not connect after pairing with a new phone?",
+      "reasons": [
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_single_index_rag",
+      "id": "Q18",
+      "question": "Has another customer experienced the Galaxy Buds3 Pro left earbud connection problem, and how was it resolved?",
+      "reasons": [
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q02",
+      "question": "My Galaxy Buds3 Pro left earbud won't connect. Is this a known issue, and has the same problem been resolved for another customer? What fixed it?",
+      "reasons": [
+        "Faithfulness: Partial"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q03",
+      "question": "How long does delivery take to a remote pincode, and is it free?",
+      "reasons": [
+        "Faithfulness: Partial",
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q05",
+      "question": "What does policy RR-004 say?",
+      "reasons": [
+        "Faithfulness: Partial",
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q06",
+      "question": "A customer received a damaged phone and wants a refund instead of a replacement. What is the official process, and do we have a previous resolved case where a refund was issued?",
+      "reasons": [
+        "Faithfulness: Partial"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q08",
+      "question": "Can I use Cash on Delivery for a Rs 60,000 laptop?",
+      "reasons": [
+        "Faithfulness: Partial",
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q09",
+      "question": "What should a customer do if their Galaxy Buds3 Pro left earbud will not connect after pairing with a new phone?",
+      "reasons": [
+        "Faithfulness: Partial",
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q10",
+      "question": "How can a customer track a shipped order, and when should support escalate a tracking delay?",
+      "reasons": [
+        "Faithfulness: Partial",
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q11",
+      "question": "Can a customer cancel an order after it has shipped, and how is a prepaid order refunded if delivery is refused?",
+      "reasons": [
+        "Faithfulness: Partial"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q12",
+      "question": "How long does a UPI refund take after a returned product passes the quality check?",
+      "reasons": [
+        "Faithfulness: Partial",
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q13",
+      "question": "A customer received a damaged item. How should they report it, and what evidence is required?",
+      "reasons": [
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q14",
+      "question": "What happens if a courier makes three unsuccessful delivery attempts or the customer refuses the package?",
+      "reasons": [
+        "Faithfulness: Partial",
+        "Answer correctness: Partially Correct"
+      ]
+    },
+    {
+      "version": "v2_multi_index_rag",
+      "id": "Q18",
+      "question": "Has another customer experienced the Galaxy Buds3 Pro left earbud connection problem, and how was it resolved?",
+      "reasons": [
+        "Answer correctness: Partially Correct"
+      ]
+    }
+  ]
+}

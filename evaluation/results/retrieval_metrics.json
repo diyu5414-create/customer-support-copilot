@@ -1,0 +1,38 @@
+[
+  {
+    "version": "V1 Basic RAG",
+    "question_count": 20,
+    "in_scope_count": 16,
+    "out_of_scope_count": 4,
+    "precision_at_5": 0.28750000000000003,
+    "recall_at_5": 0.9125,
+    "multi_source_coverage": 0.9428571428571428,
+    "routing_accuracy": null,
+    "refusal_accuracy": 1.0,
+    "false_refusals": 1
+  },
+  {
+    "version": "V2 Single-Index RAG",
+    "question_count": 20,
+    "in_scope_count": 16,
+    "out_of_scope_count": 4,
+    "precision_at_5": 0.30000000000000004,
+    "recall_at_5": 0.925,
+    "multi_source_coverage": 0.9714285714285714,
+    "routing_accuracy": null,
+    "refusal_accuracy": 1.0,
+    "false_refusals": 1
+  },
+  {
+    "version": "V2 Multi-Index RAG",
+    "question_count": 20,
+    "in_scope_count": 16,
+    "out_of_scope_count": 4,
+    "precision_at_5": 0.28750000000000003,
+    "recall_at_5": 0.94375,
+    "multi_source_coverage": 0.8714285714285714,
+    "routing_accuracy": 0.95,
+    "refusal_accuracy": 1.0,
+    "false_refusals": 0
+  }
+]
