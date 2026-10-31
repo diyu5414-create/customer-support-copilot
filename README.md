@@ -1,167 +1,340 @@
-# Customer Support Copilot
+# Customer Support Copilot — RAG Assignment
 
 ## Project Overview
 
-Customer Support Copilot is a Retrieval-Augmented Generation (RAG) application built using the Dandes Electronics knowledge base. It compares three RAG approaches:
+This project implements a **Customer Support Copilot using Retrieval-Augmented Generation (RAG)** for the Dandes Electronics knowledge base.
 
-1. **V1 Basic RAG** — basic document retrieval and answer generation.
-2. **V2 Advanced RAG** — metadata filtering, hybrid search, reranking, and query transformation.
-3. **V2 Multi-Index RAG** — intent-based routing across specialized knowledge indexes.
+The system answers customer questions using a knowledge base containing **50 documents**. It retrieves relevant information and generates context-grounded responses using an LLM.
 
-The project evaluates retrieval quality, answer faithfulness, routing accuracy, and out-of-scope refusal behavior.
+The project implements and compares three RAG approaches.
+
+### V1 — Basic RAG
+
+- Document loading and chunking
+- OpenAI embeddings
+- Chroma vector database
+- Dense vector similarity search
+- Context-based answer generation
+- Offline, online, and conversational RAG
+
+### V2 — Advanced RAG (Single Index)
+
+- Metadata filtering
+- Dense and sparse retrieval
+- BM25 keyword search
+- Hybrid retrieval using Reciprocal Rank Fusion (RRF)
+- Cross-encoder reranking
+- Query transformation and multi-query retrieval
+- Conversational RAG pipeline
+
+### V2 — Advanced RAG (Multi-Index)
+
+- Multiple knowledge indexes
+- Intent-based query routing
+- Index-specific retrieval
+- Multi-index search
+- Context-grounded response generation
+- Out-of-scope query handling
+
+---
 
 ## Project Requirements
 
-- Python
+- Python 3.10+
 - OpenAI API key
-- Required Python packages listed in `requirements.txt`
+- ChromaDB
+- LangChain integration packages
+- Sentence Transformers
+- BM25 retrieval
+- Git
 
-## Setup
+---
 
-### 1. Open the project directory
+## Project Structure
 
-Open a terminal in the project root directory.
+```text
+customer_support_copilot/
+├── data/
+│   └── dandes_electronics_kb.json
+├── v1_basic_rag/
+│   ├── basic_rag.py
+│   ├── offline_rag.py
+│   ├── online_rag.py
+│   └── conversational_rag.py
+├── v2_advanced_rag/
+│   ├── metadata_filter.py
+│   ├── hybrid_search.py
+│   ├── reranking.py
+│   ├── query_transformation.py
+│   └── advanced_rag_pipeline.py
+├── v2_multi_index/
+│   ├── build_indexes.py
+│   ├── multi_index_search.py
+│   ├── intent_router.py
+│   └── multi_index_pipeline.py
+├── evaluation/
+│   ├── golden_test_set.json
+│   ├── 1_run_versions.py
+│   ├── 2_retrieval_metrics.py
+│   ├── 3_generation_metrics.py
+│   ├── 4_comparison_table.py
+│   └── results/
+│       ├── v1_results.json
+│       ├── v2_single_index_results.json
+│       ├── v2_multi_index_results.json
+│       ├── retrieval_metrics.json
+│       ├── generation_metrics.json
+│       └── comparison_table.csv
+├── tests/
+│   └── test_project_integrity.py
+├── demo_output.txt
+├── report.pdf
+├── requirements.txt
+├── .env.example
+├── .gitignore
+└── README.md
+```
 
-### 2. Create and activate the virtual environment
+---
 
-On Windows:
+## Setup Instructions
 
-```cmd
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/diyu5414-create/customer-support-copilot.git
+cd customer-support-copilot
+```
+
+### 2. Create a virtual environment
+
+```bash
 python -m venv .venv
+```
+
+### 3. Activate the virtual environment
+
+**Windows PowerShell:**
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+**Windows Command Prompt:**
+
+```bat
 .venv\Scripts\activate
 ```
 
-If `.venv` already exists, activate it instead of recreating it.
+**Linux / macOS:**
 
-### 3. Install dependencies
+```bash
+source .venv/bin/activate
+```
 
-```cmd
+### 4. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configure environment variables
+### 5. Configure environment variables
 
-Create a `.env` file in the project root directory. Add your own OpenAI API key and the model and database settings required by the project.
-
-Example configuration:
+Create a `.env` file in the project root:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
-ANSWER_MODEL=your_supported_chat_model
-JUDGE_MODEL=your_supported_judge_model
-EMBEDDING_MODEL=text-embedding-3-small
-CHROMA_PATH=chroma_db
-COLLECTION_NAME=dandes_v1
+OPENAI_API_KEY=your_openai_api_key
+JUDGE_MODEL=your_judge_model
 ```
 
-Replace both model placeholders with model IDs actually available to your API account. The placeholders are examples, not valid model IDs. The multi-index router and pipeline intentionally stop with a clear error if ANSWER_MODEL is missing. Never commit or share your real API key.
+Replace the placeholders with your actual API credentials and model name.
 
-## Execution Order
+**Security:** Never commit `.env`, expose API keys, or include credentials in a public repository or submission archive.
 
-Run commands from the project root unless otherwise specified.
+---
 
-### Step 1: Build the V1 knowledge base
+## Execution Guide
 
-```cmd
-python v1_basic_rag\1_offline_pipeline.py
+Run commands from the project root.
+
+### V1 — Basic RAG
+
+```bash
+python v1_basic_rag/basic_rag.py
+python v1_basic_rag/offline_rag.py
+python v1_basic_rag/online_rag.py
+python v1_basic_rag/conversational_rag.py
 ```
 
-### Step 2: Run V1 basic RAG
+### V2 — Advanced RAG (Single Index)
 
-```cmd
-python v1_basic_rag\2_online_pipeline.py
+```bash
+python v2_advanced_rag/metadata_filter.py
+python v2_advanced_rag/hybrid_search.py
+python v2_advanced_rag/reranking.py
+python v2_advanced_rag/query_transformation.py
+python v2_advanced_rag/advanced_rag_pipeline.py
 ```
 
-### Step 3: Run V1 conversational RAG
+### V2 — Advanced RAG (Multi-Index)
 
-```cmd
-python v1_basic_rag\3_conversational_rag.py
+Build the knowledge indexes first:
+
+```bash
+python v2_multi_index/build_indexes.py
 ```
 
-### Step 4: Run V2 advanced RAG components
+Then run:
 
-Run the following scripts as required by their dependencies:
-
-```cmd
-python v2_advanced_rag\1_metadata_filtering.py
-python v2_advanced_rag\2_hybrid_search.py
-python v2_advanced_rag\3_reranking.py
-python v2_advanced_rag\4_query_transformation.py
-python v2_advanced_rag\5_v2_pipeline.py
+```bash
+python v2_multi_index/multi_index_search.py
+python v2_multi_index/intent_router.py
+python v2_multi_index/multi_index_pipeline.py
 ```
 
-### Step 5: Build the multi-index knowledge base
+---
 
-```cmd
-python v2_multi_index\1_build_indexes.py
-```
+## Evaluation
 
-### Step 6: Test multi-index retrieval and routing
+The project compares three RAG approaches using a shared **20-question evaluation set per version**, resulting in 60 evaluated answers.
 
-```cmd
-python v2_multi_index\2_multi_index_search.py
-python v2_multi_index\3_intent_router.py
-```
+### Retrieval Metrics
 
-### Step 7: Run the V2 multi-index pipeline
+- **Precision@5:** Proportion of retrieved documents that are relevant.
+- **Recall@5:** Proportion of expected relevant documents successfully retrieved.
+- **F1@5:** Harmonic mean of Precision@5 and Recall@5.
+- **Coverage:** Measures whether expected relevant sources are represented in the retrieved results, according to the evaluation implementation.
+- **Routing Accuracy:** Measures whether the multi-index router selects the expected knowledge indexes.
+- **Refusal Accuracy:** Measures correct handling of in-scope and out-of-scope questions.
+- **False Refusals:** Counts in-scope questions incorrectly refused.
 
-```cmd
-python v2_multi_index\4_v2_multi_index_pipeline.py
-```
+### Generation Metrics
 
-### Step 8: Run evaluation for all three versions
+The project uses custom LLM-as-Judge evaluation.
 
-Run the scripts in this order:
+**Faithfulness (LLM Judge):**
+- Each generated answer is classified as `Faithful`, `Partial`, or `Unfaithful`.
+- Faithfulness percentage is calculated from answers receiving the `Faithful` classification.
+- Refusals are excluded from the faithfulness percentage.
 
-```cmd
-python evaluation\1_run_versions.py
-python evaluation\2_retrieval_metrics.py
-python evaluation\3_generation_metrics.py
-python evaluation\4_comparison_table.py
-```
+**Refusal Evaluation:**
+- Correct refusal
+- Should have refused but didn't
+- False refusal
+- Correctly answered without refusal
 
-## Offline integrity tests
+The faithfulness percentage and refusal accuracy measure different aspects of generation quality.
 
-These tests validate the packaged project structure and data without calling an API or building vector indexes. Run them from the project root:
+---
 
-```cmd
+## Retrieval Results
+
+| Metric | V1 Basic RAG | V2 Single-Index | V2 Multi-Index |
+||---:|---:|---:|
+| Precision@5 | 28.75% | 30.00% | 28.75% |
+| Recall@5 | 91.25% | 92.50% | 94.38% |
+| F1@5 | 41.84% | 43.09% | 42.14% |
+| Coverage | 93.75% | 93.75% | 100.00% |
+| Routing Accuracy | N/A | N/A | 95.00% |
+| Refusal Accuracy | 95.00% | 95.00% | 100.00% |
+| False Refusals | 1 | 1 | 0 |
+| Questions Evaluated | 20 | 20 | 20 |
+
+## Generation Results
+
+| Metric | V1 Basic RAG | V2 Single-Index | V2 Multi-Index |
+||---:|---:|---:| 
+| Faithfulness (LLM Judge) | 100.00% | 73.33% | 12.50% |
+| Refusal Accuracy | 95.00% | 95.00% | 100.00% |
+| False Refusals | 1 | 1 | 0 |
+| Questions Evaluated | 20 | 20 | 20 |
+
+---
+
+## V2 Multi-Index Target Assessment
+
+| Target | Recorded Result | Assessment |
+||---:|---|
+| Routing Accuracy ≥ 85% | 95.00% | Met |
+| Recall@5 ≥ 0.80 | 94.38% | Met |
+| Faithfulness (LLM Judge) ≥ 85% | 12.50% | Not met |
+| Refusal Accuracy = 100% | 100.00% | Met |
+| False Refusals = 0 | 0 | Met |
+
+---
+
+## Interpretation
+
+V2 Multi-Index achieves the highest Recall@5, Coverage, Routing Accuracy, and refusal accuracy. It also produces zero false refusals.
+
+However, its Faithfulness (LLM Judge) score is lower than the other versions. This suggests that although retrieval and routing performance are strong, the generated answers require further improvement in grounding and factual consistency.
+
+V2 Single-Index achieves the highest Precision@5 and F1@5.
+
+The results demonstrate trade-offs across the three approaches rather than a universal winner. Improving answer grounding while preserving retrieval and routing performance is an important next step.
+
+---
+
+## Testing
+
+Run the automated integrity tests:
+
+```bash
 python -m unittest discover -s tests -v
 ```
 
-A passing integrity test is not a substitute for integration tests. To verify embedding, Chroma, routing, and generation end to end, configure a valid `.env`, install the required dependencies, and run the pipeline commands above. Those integration runs may use API credits and can download a cross-encoder model.
+Expected result:
 
-## Evaluation Outputs
+```text
+Ran 8 tests
+OK
+```
 
-Evaluation results are saved under `evaluation/results/`.
+### Python Compilation Check
 
-- `v1_results.json` — V1 answers, retrieval results, and sources.
-- `v2_single_index_results.json` — V2 single-index answers and retrieval results.
-- `v2_multi_index_results.json` — V2 multi-index answers, routing, and retrieval results.
-- `retrieval_metrics.json` — retrieval, routing, refusal, and related metrics.
-- `generation_metrics.json` — custom LLM-as-Judge results.
+```bash
+python -m compileall -q v1_basic_rag v2_advanced_rag v2_multi_index evaluation
+```
 
-The comparison script generates `evaluation/comparison_table.csv`.
+No output indicates successful compilation.
+
+---
 
 ## Demo and Report
 
-- `demo_output.txt` contains the multi-index pipeline demonstration output.
-- `report.pdf` contains the project evaluation report.
+- `demo_output.txt` — sample project execution output.
+- `report.pdf` — detailed RAG architecture comparison and evaluation report.
 
-## Security
+---
 
-- Keep `.env` local and never include it in a public repository or submission ZIP.
-- Do not share API keys in screenshots, logs, or source files.
-- Keep the original knowledge-base dataset unchanged.
+## Security Considerations
 
+- API keys are managed through environment variables.
+- Credentials are excluded from version control.
+- Retrieved knowledge base context is used to ground generated answers.
+- Out-of-scope questions are handled through refusal mechanisms.
+- Evaluation is used to assess retrieval and generation performance.
 
-## Evaluation method
+---
 
-The evaluation follows the mentor program: Precision@K, Recall@K and F1 compare retrieved document IDs with expected source IDs; an LLM judge labels faithfulness as Faithful, Partial or Unfaithful; and refusal checking identifies correct refusals, missed refusals and false refusals. Your project TOP_K remains 5. Routing accuracy is retained as an assignment-specific measure for the multi-index router. There is no RAGAS evaluation and no separate answer-correctness judge.
+## Important Implementation Notes
 
-## Important implementation note
+- The project uses `TOP_K = 5` for retrieval evaluation.
+- Retriever `k` and `top_k` values are retained from the project scripts.
+- Core dependencies include `langchain-core`, `langchain-openai`, `langchain-chroma`, `chromadb`, `rank-bm25`, and `sentence-transformers`.
+- The umbrella `langchain` package is not required by the core project.
+- The environment variables used by the project are `OPENAI_API_KEY` and `JUDGE_MODEL`.
+- Custom evaluation includes retrieval metrics, refusal evaluation, and LLM-as-Judge faithfulness.
+- Evaluation results are available in `evaluation/results/`.
 
-- The `top_k` / retriever `k` values are retained from the supplied project scripts; they have not been changed to the mentor demo's default.
-- Core imports follow the mentor's package style: `langchain-core`, `langchain-openai`, `langchain-chroma`, `chromadb`, `rank-bm25`, and `sentence-transformers`. The umbrella `langchain` package is not required by the core project.
-- `OPENAI_API_KEY` is the environment variable used by these project scripts. Keep the name consistent in `.env`.
-- Evaluation uses only the mentor-style custom metrics; no RAGAS package is required.
+---
 
+## Technologies Used
+
+Python · LangChain · OpenAI API · OpenAI Embeddings · ChromaDB · BM25 · Reciprocal Rank Fusion (RRF) · Sentence Transformers · Cross-Encoder Reranking · RAG · LLM-as-Judge · Git · GitHub
+
+---
+
+## Repository
+
+GitHub: https://github.com/diyu5414-create/customer-support-copilot
