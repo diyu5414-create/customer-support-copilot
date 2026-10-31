@@ -1,50 +1,55 @@
 ================================================================================
 Question : Can I return an opened laptop on day 8 if I have the original box and all accessories?
 Routing  : {'intents': ['policy'], 'indexes': ['policy_index'], 'reason': 'The question asks about return eligibility for an opened laptop.'}
-Answer   : Yes. Under the return policy effective 1 July 2026, an opened laptop can be returned within 10 days of delivery, so day 8 is within the window. It must be in good condition with no physical damage and include the original box, all accessories, manuals, and the invoice.
+Answer   : Yes. Under the return policy effective 1 July 2026, an opened laptop can be returned within 10 days of delivery, so day 8 is within the window. It must be in good condition, have no physical damage, and include the original box, all accessories, manuals, and the invoice.
 Sources  : RR-002, RR-001, RR-003, RR-005, RR-004
 Top 5 retrieved IDs: ['RR-002', 'RR-001', 'RR-003', 'RR-005', 'RR-004']
 
 ================================================================================
 Question : My Galaxy Buds3 Pro left earbud won't connect. Is this a known issue, and has the same problem been resolved for another customer? What fixed it?
-Routing  : {'intents': ['product', 'past_issue'], 'indexes': ['product_index', 'ticket_index'], 'reason': 'The question asks whether a product issue is known and whether it was resolved for another customer.'}
-Answer   : Yes. Dandes' known-issue guidance, dated 1 July 2026, says the left Galaxy Buds3 Pro earbud may fail to connect after pairing with a new phone.
+Routing  : {'intents': ['product', 'past_issue'], 'indexes': ['product_index', 'ticket_index'], 'reason': 'The question asks whether a product issue is known and whether the same problem was resolved for another customer.'}
+Answer   : Yes. A known Galaxy Buds3 Pro issue is that the left earbud may not connect after pairing with a new phone. The 1 July 2026 guidance is to put both earbuds in the case, close the lid for 10 seconds, then reset them in the Galaxy Wearable app or hold both touchpads for 7 seconds. Pair them again as a new device.
 
-Put both earbuds in the case, close the lid for 10 seconds, then reset them in the Galaxy Wearable app or hold both touchpads for 7 seconds. Pair them again as a new device.
+A resolved customer case had the same problem after switching phones. The earbuds were still paired with the old phone; resetting them in the case and pairing again as a new device fixed it.
 
-A resolved customer case reported the same problem after switching phones. Resetting the earbuds in the case and pairing them again as a new device fixed it.
+If the problem continues after the reset, the guidance says to treat it as defective under RR-003 within 48 hours of delivery, or as a warranty claim after that.
 Sources  : TCK-1001, KI-001, FAQ-011, KI-002, TCK-1011
 Top 5 retrieved IDs: ['TCK-1001', 'KI-001', 'FAQ-011', 'KI-002', 'TCK-1011']
 
 ================================================================================
 Question : How long does delivery take to a remote pincode, and is it free?
-Routing  : {'intents': ['policy'], 'indexes': ['policy_index'], 'reason': 'The question asks about delivery times to a remote pincode and free shipping.'}
-Answer   : Delivery to a remote pincode takes 5-9 business days. Orders of Rs 499 or more qualify for free delivery; orders below Rs 499 have a Rs 49 delivery charge. These rules are effective 1 July 2026.
+Routing  : {'intents': ['policy'], 'indexes': ['policy_index'], 'reason': 'The question asks about delivery times for a remote pincode and free shipping.'}
+Answer   : Delivery to a remote pincode takes **5 to 9 business days**. Normal delivery charges apply: it’s **free for orders of Rs 499 or more**, and costs **Rs 49 for orders below Rs 499**. Express delivery isn’t available for remote pincodes. These terms are effective from 1 July 2026.
 Sources  : SH-002, SH-001, SH-004, RR-001, RR-003
 Top 5 retrieved IDs: ['SH-002', 'SH-001', 'SH-004', 'RR-001', 'RR-003']
 
 ================================================================================
 Question : A customer wants to change the address after the order shipped. What is the official process, and do we have a resolved case like this?
-Routing  : {'intents': ['order', 'past_issue'], 'indexes': ['order_index', 'ticket_index'], 'reason': 'The question asks about the process for changing an address after shipping and a resolved case like this.'}
-Answer   : Once an order has shipped, Dandes and the support team can't change its delivery address. The customer can ask the courier to reschedule delivery to the same address, or refuse the delivery and place a new order with the correct address. A refused delivery is refunded under policy SH-005.
+Routing  : {'intents': ['order', 'past_issue'], 'indexes': ['order_index', 'ticket_index'], 'reason': 'The question asks about the process for changing an address after shipping and whether there is a resolved case.'}
+Answer   : **Official process (effective 1 July 2026):** Once an order has shipped, Dandes Electronics and the support team cannot change the delivery address. The customer can ask the courier to reschedule delivery to the same address, or refuse the delivery and place a new order with the correct address. A refund for a refused delivery follows policy SH-005.
 
-There is a resolved case: a customer with a shipped Sony WH-1000XM5 order refused delivery and placed a new order at their new address. The first order was refunded after the package reached the warehouse.
+**Resolved case:** Yes. In a resolved case involving a shipped headphone order, the customer refused delivery, placed a new order with the new address, and received a refund for the first order after the package reached the warehouse.
 Sources  : OG-002, TCK-1004, OG-001, OG-003, OG-005
 Top 5 retrieved IDs: ['OG-002', 'TCK-1004', 'OG-001', 'OG-003', 'OG-005']
 
 ================================================================================
 Question : What does policy RR-004 say?
 Routing  : {'intents': ['policy'], 'indexes': ['policy_index'], 'reason': 'The question asks about a specific policy code, RR-004.'}
-Answer   : Policy RR-004, dated 1 July 2026, says refunds begin after the returned product passes the quality check. UPI and wallet refunds take 1-3 business days; credit and debit card and net banking refunds take 5-7 business days. Cash on Delivery refunds are sent to the customer's bank account within 5-7 business days after bank details are added on the Orders page. EMI refunds go to the card, and the bank closes the EMI plan.
+Answer   : RR-004 is the refund policy, effective 1 July 2026. Refunds begin after the returned product passes the quality check:
+
+- UPI and wallet: 1–3 business days.
+- Credit card, debit card, and net banking: 5–7 business days.
+- Cash on Delivery: 5–7 business days after you add bank details on the Orders page.
+- EMI: refunded to the card; the bank closes the EMI plan.
 Sources  : RR-003, RR-005, RR-002, RR-004, RR-001
 Top 5 retrieved IDs: ['RR-003', 'RR-005', 'RR-002', 'RR-004', 'RR-001']
 
 ================================================================================
 Question : A customer received a damaged phone and wants a refund instead of a replacement. What is the official process, and do we have a previous resolved case where a refund was issued?
-Routing  : {'intents': ['policy', 'order', 'past_issue'], 'indexes': ['policy_index', 'order_index', 'ticket_index'], 'reason': 'The question asks about the refund policy, the official process for a damaged phone, and a previous resolved refund case.'}
-Answer   : For a damaged phone, report the issue within 48 hours of delivery using Report a Problem on the Orders page. Provide photos of the phone, product box, and shipping label, plus an unboxing video if available. The product will be picked up for a quality check. A replacement is provided first; a refund is issued if the same model and colour are unavailable. UPI and wallet refunds take 1-3 business days, while card and net banking refunds take 5-7 business days.
+Routing  : {'intents': ['policy', 'order', 'past_issue'], 'indexes': ['policy_index', 'order_index', 'ticket_index'], 'reason': 'The question asks for the official refund process for a damaged phone and a previous resolved refund case.'}
+Answer   : Under the damaged-product policy effective 1 July 2026, report the damage within 48 hours of delivery using **Report a Problem** on the Orders page. Provide photos of the phone and box, plus an unboxing video if available. After pickup and a quality check, phones are generally handled with a replacement; a refund is available only if a replacement unit is unavailable.
 
-Yes. In resolved case TCK-1002, an iPhone 16 arrived with a cracked screen. The customer reported it within 48 hours and provided photos and an unboxing video. After pickup and quality check, the same-colour replacement was unavailable, so a full refund was issued to the customer's credit card.
+There is a previous resolved case: in TCK-1002, an iPhone 16 arrived with a cracked screen. The customer reported it within 48 hours and provided photos and an unboxing video. After pickup and quality check, the same-colour replacement was unavailable, so a full refund was issued to the customer’s credit card. The case does not specify how long the refund took.
 Sources  : TCK-1002, RR-003, TCK-1011, RR-001, RR-005
 Top 5 retrieved IDs: ['TCK-1002', 'RR-003', 'TCK-1011', 'RR-001', 'RR-005']
 
@@ -54,3 +59,4 @@ Routing  : {'intents': ['out_of_scope'], 'indexes': [], 'reason': 'The available
 Answer   : I don't know based on the available information.
 Sources  : None
 Top 5 retrieved IDs: []
+

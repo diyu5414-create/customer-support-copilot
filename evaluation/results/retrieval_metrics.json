@@ -6,10 +6,125 @@
     "out_of_scope_count": 4,
     "precision_at_5": 0.28750000000000003,
     "recall_at_5": 0.9125,
-    "multi_source_coverage": 0.9428571428571428,
+    "f1_at_5": 0.418425,
     "routing_accuracy": null,
-    "refusal_accuracy": 1.0,
-    "false_refusals": 1
+    "refusal_accuracy": 0.95,
+    "false_refusals": 1,
+    "should_have_refused": 0,
+    "per_question": [
+      {
+        "id": "Q01",
+        "question": "Can I return an opened laptop on day 8 if I have the original box and all accessories?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q02",
+        "question": "My Galaxy Buds3 Pro left earbud won't connect. Is this a known issue, and has the same problem been resolved for another customer? What fixed it?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q03",
+        "question": "How long does delivery take to a remote pincode, and is it free?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q04",
+        "question": "A customer wants to change the address after the order shipped. What is the official process, and do we have a resolved case like this?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q05",
+        "question": "What does policy RR-004 say?",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0
+      },
+      {
+        "id": "Q06",
+        "question": "A customer received a damaged phone and wants a refund instead of a replacement. What is the official process, and do we have a previous resolved case where a refund was issued?",
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1": 0.6
+      },
+      {
+        "id": "Q08",
+        "question": "Can I use Cash on Delivery for a Rs 60,000 laptop?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q09",
+        "question": "What should a customer do if their Galaxy Buds3 Pro left earbud will not connect after pairing with a new phone?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q10",
+        "question": "How can a customer track a shipped order, and when should support escalate a tracking delay?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q11",
+        "question": "Can a customer cancel an order after it has shipped, and how is a prepaid order refunded if delivery is refused?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q12",
+        "question": "How long does a UPI refund take after a returned product passes the quality check?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q13",
+        "question": "A customer received a damaged item. How should they report it, and what evidence is required?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q14",
+        "question": "What happens if a courier makes three unsuccessful delivery attempts or the customer refuses the package?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q15",
+        "question": "What should a customer do if a product develops a defect after the return window has ended?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q17",
+        "question": "What is the known issue with AirPods Pro 2, and what troubleshooting guidance is available?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q18",
+        "question": "Has another customer experienced the Galaxy Buds3 Pro left earbud connection problem, and how was it resolved?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      }
+    ]
   },
   {
     "version": "V2 Single-Index RAG",
@@ -18,10 +133,125 @@
     "out_of_scope_count": 4,
     "precision_at_5": 0.30000000000000004,
     "recall_at_5": 0.925,
-    "multi_source_coverage": 0.9714285714285714,
+    "f1_at_5": 0.430925,
     "routing_accuracy": null,
-    "refusal_accuracy": 1.0,
-    "false_refusals": 1
+    "refusal_accuracy": 0.95,
+    "false_refusals": 1,
+    "should_have_refused": 0,
+    "per_question": [
+      {
+        "id": "Q01",
+        "question": "Can I return an opened laptop on day 8 if I have the original box and all accessories?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q02",
+        "question": "My Galaxy Buds3 Pro left earbud won't connect. Is this a known issue, and has the same problem been resolved for another customer? What fixed it?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q03",
+        "question": "How long does delivery take to a remote pincode, and is it free?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q04",
+        "question": "A customer wants to change the address after the order shipped. What is the official process, and do we have a resolved case like this?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q05",
+        "question": "What does policy RR-004 say?",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0
+      },
+      {
+        "id": "Q06",
+        "question": "A customer received a damaged phone and wants a refund instead of a replacement. What is the official process, and do we have a previous resolved case where a refund was issued?",
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8
+      },
+      {
+        "id": "Q08",
+        "question": "Can I use Cash on Delivery for a Rs 60,000 laptop?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q09",
+        "question": "What should a customer do if their Galaxy Buds3 Pro left earbud will not connect after pairing with a new phone?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q10",
+        "question": "How can a customer track a shipped order, and when should support escalate a tracking delay?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q11",
+        "question": "Can a customer cancel an order after it has shipped, and how is a prepaid order refunded if delivery is refused?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q12",
+        "question": "How long does a UPI refund take after a returned product passes the quality check?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q13",
+        "question": "A customer received a damaged item. How should they report it, and what evidence is required?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q14",
+        "question": "What happens if a courier makes three unsuccessful delivery attempts or the customer refuses the package?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q15",
+        "question": "What should a customer do if a product develops a defect after the return window has ended?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q17",
+        "question": "What is the known issue with AirPods Pro 2, and what troubleshooting guidance is available?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q18",
+        "question": "Has another customer experienced the Galaxy Buds3 Pro left earbud connection problem, and how was it resolved?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      }
+    ]
   },
   {
     "version": "V2 Multi-Index RAG",
@@ -30,9 +260,124 @@
     "out_of_scope_count": 4,
     "precision_at_5": 0.28750000000000003,
     "recall_at_5": 0.94375,
-    "multi_source_coverage": 0.8714285714285714,
+    "f1_at_5": 0.4214,
     "routing_accuracy": 0.95,
     "refusal_accuracy": 1.0,
-    "false_refusals": 0
+    "false_refusals": 0,
+    "should_have_refused": 0,
+    "per_question": [
+      {
+        "id": "Q01",
+        "question": "Can I return an opened laptop on day 8 if I have the original box and all accessories?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q02",
+        "question": "My Galaxy Buds3 Pro left earbud won't connect. Is this a known issue, and has the same problem been resolved for another customer? What fixed it?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q03",
+        "question": "How long does delivery take to a remote pincode, and is it free?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q04",
+        "question": "A customer wants to change the address after the order shipped. What is the official process, and do we have a resolved case like this?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q05",
+        "question": "What does policy RR-004 say?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q06",
+        "question": "A customer received a damaged phone and wants a refund instead of a replacement. What is the official process, and do we have a previous resolved case where a refund was issued?",
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1": 0.6
+      },
+      {
+        "id": "Q08",
+        "question": "Can I use Cash on Delivery for a Rs 60,000 laptop?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q09",
+        "question": "What should a customer do if their Galaxy Buds3 Pro left earbud will not connect after pairing with a new phone?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q10",
+        "question": "How can a customer track a shipped order, and when should support escalate a tracking delay?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q11",
+        "question": "Can a customer cancel an order after it has shipped, and how is a prepaid order refunded if delivery is refused?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "id": "Q12",
+        "question": "How long does a UPI refund take after a returned product passes the quality check?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q13",
+        "question": "A customer received a damaged item. How should they report it, and what evidence is required?",
+        "precision": 0.2,
+        "recall": 0.5,
+        "f1": 0.2857
+      },
+      {
+        "id": "Q14",
+        "question": "What happens if a courier makes three unsuccessful delivery attempts or the customer refuses the package?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q15",
+        "question": "What should a customer do if a product develops a defect after the return window has ended?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q17",
+        "question": "What is the known issue with AirPods Pro 2, and what troubleshooting guidance is available?",
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1": 0.3333
+      },
+      {
+        "id": "Q18",
+        "question": "Has another customer experienced the Galaxy Buds3 Pro left earbud connection problem, and how was it resolved?",
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      }
+    ]
   }
 ]

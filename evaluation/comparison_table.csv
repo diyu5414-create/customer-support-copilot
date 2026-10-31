@@ -1,0 +1,8 @@
+﻿Metric,V1 Basic RAG,V2 Single-Index RAG,V2 Multi-Index RAG
+Precision@5,28.75%,30.00%,28.75%
+Recall@5,91.25%,92.50%,94.38%
+F1@5,41.84%,43.09%,42.14%
+Faithfulness (LLM Judge),100.00%,73.33%,12.50%
+Refusal Accuracy,95.00%,95.00%,100.00%
+False Refusals,1,1,0
+Routing Accuracy,N/A,N/A,95.00%

@@ -10,7 +10,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "Yes. Under the policy effective 1 July 2026, opened laptops can be returned within 10 days of delivery. The laptop must be in good condition with no physical damage and include the original box, all accessories, manuals, and the invoice. [RR-001] [RR-002]",
+    "answer": "Yes. Under the policy effective 1 July 2026, an opened laptop may be returned within 10 days of delivery if it is in good condition, has no physical damage, and is returned with its original box, all accessories, manuals, and the invoice. [RR-001] [RR-002]",
     "retrieved_document_ids": [
       "TCK-1014",
       "RR-002",
@@ -39,7 +39,7 @@
       "product_index",
       "ticket_index"
     ],
-    "answer": "Yes. This is a known issue that can happen after pairing the Galaxy Buds3 Pro with a new phone [KI-001]. It was resolved for another customer: both earbuds worked after they reset them and paired them again as a new device [TCK-1001].\n\nTo try the fix, put both earbuds in the case, close the lid for 10 seconds, then reset them in the Galaxy Wearable app or by holding both touchpads for 7 seconds. Pair them again as a new device [KI-001].",
+    "answer": "Yes. This is a known issue, often after pairing the Galaxy Buds3 Pro with a new phone. [KI-001]\n\nThe same problem was resolved for another customer by resetting the earbuds in the case and pairing them again as a new device. [TCK-1001] Try putting both earbuds in the case, closing the lid for 10 seconds, then resetting them in the Galaxy Wearable app or by holding both touchpads for 7 seconds. Pair them again as a new device. [KI-001]",
     "retrieved_document_ids": [
       "TCK-1001",
       "KI-001",
@@ -66,7 +66,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "Delivery to a remote pincode takes **5 to 9 business days**. Normal delivery charges apply: orders of **Rs 499 or more are free**, and orders below Rs 499 have a **Rs 49 delivery charge**. This policy is effective **1 July 2026**. [SH-002] [SH-001]",
+    "answer": "Delivery to a remote pincode takes **5 to 9 business days**. Normal delivery charges apply: it’s free for orders of **Rs 499 or more**, and **Rs 49** for orders below Rs 499. [SH-002] [SH-001]",
     "retrieved_document_ids": [
       "SH-002",
       "TCK-1005",
@@ -95,20 +95,20 @@
       "order_index",
       "ticket_index"
     ],
-    "answer": "After an order ships, Dandes Electronics cannot change its delivery address. The customer can ask the courier to reschedule delivery to the same address, or refuse the delivery and place a new order with the correct address. A refund after refusal follows policy SH-005. [OG-002]\n\nYes. In a resolved case involving a shipped Sony WH-1000XM5 order, the customer refused delivery and placed a new order with the updated address; the first order was refunded after the package reached the warehouse. [TCK-1004]",
+    "answer": "The official process is that the address cannot be changed after the order has shipped. The customer can ask the courier to reschedule delivery to the same address, or refuse the delivery and place a new order with the correct address. Refunds for refused deliveries follow policy SH-005. [OG-002]\n\nThere is a resolved case: in TCK-1004, the customer refused the shipped order, placed a new order with the correct address, and received a refund after the first package reached the warehouse. [TCK-1004]\n\nOG-002 is dated 1 July 2026.",
     "retrieved_document_ids": [
       "TCK-1004",
       "OG-002",
       "OG-001",
       "OG-003",
-      "OG-005"
+      "TCK-1003"
     ],
     "sources": [
       "TCK-1004",
       "OG-002",
       "OG-001",
       "OG-003",
-      "OG-005"
+      "TCK-1003"
     ],
     "routing": null
   },
@@ -125,15 +125,15 @@
     "answer": "I don't know based on the available information.",
     "retrieved_document_ids": [
       "OG-001",
+      "OG-005",
       "RR-001",
-      "RR-003",
       "RR-005",
       "TCK-1011"
     ],
     "sources": [
       "OG-001",
+      "OG-005",
       "RR-001",
-      "RR-003",
       "RR-005",
       "TCK-1011"
     ],
@@ -155,7 +155,7 @@
       "order_index",
       "ticket_index"
     ],
-    "answer": "The official process, under the policy effective **1 July 2026**, is to report the damage through **Report a Problem** on the Orders page within **48 hours of delivery**. Upload photos of the phone, box and shipping label; include an unboxing video if available. A pickup is scheduled within 2 business days, followed by a quality check. [RR-003] [OG-005]\n\nFor a damaged phone, a refund is available only if a replacement unit is not available. Replacement rules specify the same model and colour; if the same model is out of stock, the customer can choose a refund or a different colour of that model. [RR-003] [RR-005]\n\nYes. In a resolved iPhone 16 case, the customer reported transit damage within 48 hours and provided photos and an unboxing video. After pickup and quality check, a refund was issued because a replacement in the same colour was unavailable. [TCK-1002]",
+    "answer": "The official process is to report the damaged phone through **Orders → Report a Problem within 48 hours of delivery**. Upload photos of the phone, box, and shipping label, plus an unboxing video if available. A pickup is scheduled within 2 business days; after the quality check, the outcome is handled under the damaged-item and replacement rules. These policies are effective **1 July 2026**. [RR-003] [RR-005] [OG-005]\n\nFor a **mobile phone**, a refund is available only if a replacement unit is not available. Replacements are for the same model and colour; if the same model is out of stock, the customer may choose a refund or a different colour of that model. [RR-003] [RR-005]\n\nYes. In a previous resolved case, an iPhone 16 arrived with a cracked screen. The customer reported it within 48 hours with photos and an unboxing video; after pickup and quality check, a full refund was issued because a replacement in the same colour was unavailable. [TCK-1002]",
     "retrieved_document_ids": [
       "TCK-1002",
       "RR-003",
@@ -205,20 +205,20 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "No. Cash on Delivery is available only for orders up to Rs 50,000, so a Rs 60,000 laptop must be paid for online. This policy is dated 1 July 2026. [SH-004]",
+    "answer": "No. Cash on Delivery is available only for orders up to Rs 50,000, so a Rs 60,000 laptop must be paid for online. [SH-004]",
     "retrieved_document_ids": [
       "SH-004",
       "SH-003",
       "TCK-1012",
       "SH-005",
-      "TCK-1006"
+      "TCK-1003"
     ],
     "sources": [
       "SH-004",
       "SH-003",
       "TCK-1012",
       "SH-005",
-      "TCK-1006"
+      "TCK-1003"
     ],
     "routing": null
   },
@@ -232,7 +232,7 @@
     "expected_indexes": [
       "product_index"
     ],
-    "answer": "Put both earbuds in the case, close the lid for 10 seconds, then reset them using the Galaxy Wearable app or by holding both touchpads for 7 seconds. Pair them again as a new device. If the left earbud still will not connect, treat it as defective within 48 hours of delivery, or as a warranty claim after that. [KI-001]",
+    "answer": "Put both earbuds in the case and close the lid for 10 seconds. Then reset them using the Galaxy Wearable app or by holding both touchpads for 7 seconds, and pair them again as a new device. If the issue continues, treat it as defective under RR-003 if it’s within 48 hours of delivery; after that, pursue a warranty claim. [KI-001]",
     "retrieved_document_ids": [
       "KI-001",
       "TCK-1001",
@@ -288,7 +288,7 @@
       "order_index",
       "policy_index"
     ],
-    "answer": "Once an order has shipped, it cannot be cancelled. The customer can refuse delivery instead. For a prepaid order, a full refund is issued once the package reaches the warehouse. [OG-001] [SH-005]",
+    "answer": "Under the guidance dated 1 July 2026, an order cannot be cancelled after it has shipped. The customer can refuse delivery instead. For a prepaid order, a full refund is issued once the package reaches the warehouse. [OG-001] [SH-005]",
     "retrieved_document_ids": [
       "OG-001",
       "SH-005",
@@ -315,7 +315,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "UPI refunds take 1 to 3 business days after the returned product passes the quality check. [RR-004]",
+    "answer": "A UPI refund takes **1 to 3 business days** after the returned product passes the quality check. [RR-004]",
     "retrieved_document_ids": [
       "RR-004",
       "OG-005",
@@ -344,20 +344,20 @@
       "order_index",
       "policy_index"
     ],
-    "answer": "Report the damage within 48 hours of delivery by opening the order on the Orders page and selecting **Report a Problem**. Upload photos of the product and box, plus a photo of the shipping label; include an unboxing video if available. [OG-005] [RR-003]",
+    "answer": "Report the damage through **Report a Problem** on the Orders page within **48 hours of delivery**. Upload photos of the product, the box, and the shipping label; include an unboxing video if available. A pickup is scheduled within 2 business days. [OG-005] [RR-003]\n\nThe damaged-item instructions are dated **1 July 2026**. [RR-003]",
     "retrieved_document_ids": [
       "OG-005",
       "RR-003",
       "TCK-1002",
       "TCK-1007",
-      "OG-006"
+      "RR-001"
     ],
     "sources": [
       "OG-005",
       "RR-003",
       "TCK-1002",
       "TCK-1007",
-      "OG-006"
+      "RR-001"
     ],
     "routing": null
   },
@@ -371,7 +371,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "After three unsuccessful delivery attempts, the package is returned to Dandes Electronics. If you refuse the package, it is also returned. For prepaid orders, a full refund is issued once the package reaches the warehouse; Cash on Delivery orders are cancelled. [SH-005]",
+    "answer": "If all three delivery attempts fail, or you refuse the package, it is returned to Dandes Electronics. For prepaid orders, a full refund is issued once it reaches the warehouse; Cash on Delivery orders are cancelled. [SH-005]",
     "retrieved_document_ids": [
       "SH-005",
       "OG-002",
@@ -398,7 +398,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "After the return window ends, defects are covered by the manufacturer warranty under the policy effective 1 July 2026. Download the invoice from the Orders page and visit the brand’s authorised service centre, or book an onsite visit if the product has onsite warranty. Dandes Electronics does not repair products directly. [RR-001] [OG-006]",
+    "answer": "After the return window ends, the defect is covered by the manufacturer warranty under the policy effective 1 July 2026. Download the invoice from the Orders page and contact the brand’s authorised service centre, or book an onsite visit if the product has onsite warranty. Dandes Electronics does not repair products directly. [RR-001] [OG-006]",
     "retrieved_document_ids": [
       "OG-006",
       "RR-001",
@@ -448,7 +448,7 @@
     "expected_indexes": [
       "product_index"
     ],
-    "answer": "The known issue is that one AirPods Pro 2 earbud may not charge in its case, often because the charging contacts are dirty. Gently clean the earbud and case contacts with a dry cotton swab, then check that the earbud sits fully in the case. If it still won’t charge, raise an Apple warranty claim. [KI-002]",
+    "answer": "The known issue is that one AirPods Pro 2 earbud may not charge in its case, often because the charging contacts are dirty. Gently clean the earbud and case contacts with a dry cotton swab, then check that the earbud sits fully in the case. If it still doesn’t charge, raise an Apple warranty claim. [KI-002]",
     "retrieved_document_ids": [
       "KI-002",
       "FAQ-009",
@@ -477,7 +477,7 @@
       "product_index",
       "ticket_index"
     ],
-    "answer": "Yes. A customer had the same issue after switching to a new phone because the earbuds were still paired with the old phone. They reset the earbuds and paired them again as a new device, and both earbuds worked afterward [TCK-1001]. The reset steps are to put both earbuds in the case, close the lid for 10 seconds, reset them through the Galaxy Wearable app or by holding both touchpads for 7 seconds, then pair again as a new device [KI-001].",
+    "answer": "Yes. Another customer had the same issue after switching to a new phone; the earbuds were still paired with the old phone. They reset both earbuds and paired them again as a new device, and both worked afterward [TCK-1001]. The reset steps are to place both earbuds in the case, close the lid for 10 seconds, then reset through the Galaxy Wearable app or hold both touchpads for 7 seconds before pairing again [KI-001].",
     "retrieved_document_ids": [
       "TCK-1001",
       "KI-001",
@@ -506,14 +506,14 @@
       "RR-003",
       "RR-001",
       "FAQ-008",
-      "RR-002"
+      "RR-005"
     ],
     "sources": [
       "FAQ-002",
       "RR-003",
       "RR-001",
       "FAQ-008",
-      "RR-002"
+      "RR-005"
     ],
     "routing": null
   },

@@ -10,7 +10,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "Yes. Under the return policy effective 1 July 2026, opened laptops can be returned within 10 days of delivery, so day 8 is within the return window. The laptop must be in good condition, have no physical damage, and be returned with the original box, all accessories, manuals, and the invoice.",
+    "answer": "Yes. Under the return policy effective 1 July 2026, opened laptops can be returned within 10 days of delivery. On day 8, you’re within the return window, provided the laptop is in good condition with no physical damage and you include the original box, all accessories, manuals, and the invoice.",
     "retrieved_document_ids": [
       "RR-002",
       "RR-001",
@@ -47,7 +47,7 @@
       "product_index",
       "ticket_index"
     ],
-    "answer": "Yes. The 1 July 2026 known-issue guidance says one Galaxy Buds3 Pro earbud—usually the left—may fail to connect after pairing with a new phone.\n\nTry this fix: put both earbuds in the case, close the lid for 10 seconds, then reset them using the Galaxy Wearable app or by holding both touchpads for 7 seconds. Pair them again as a new device.\n\nThis was resolved for another customer who had switched phones: the earbuds were still paired with the old phone, and resetting them and pairing again fixed the issue. If yours still won’t connect after the reset, the guidance says to treat it as defective under RR-003 if it’s within 48 hours of delivery, or as a warranty claim after that.",
+    "answer": "Yes. The known-issue guidance effective 1 July 2026 says one Galaxy Buds3 Pro earbud—usually the left—may fail to connect after pairing with a new phone.\n\nPut both earbuds in the case and close the lid for 10 seconds. Then reset them using the Galaxy Wearable app or by holding both touchpads for 7 seconds, and pair them again as a new device.\n\nThis was resolved for another customer on 4 August 2026: the earbuds were still paired with their old phone, and resetting and pairing them again fixed the problem.\n\nIf it still doesn’t work after a reset, the guidance says to treat it as defective under RR-003 if it’s within 48 hours of delivery, or as a warranty claim after that.",
     "retrieved_document_ids": [
       "TCK-1001",
       "KI-001",
@@ -71,7 +71,7 @@
         "product_index",
         "ticket_index"
       ],
-      "reason": "The question asks about a known product issue and whether the same problem was resolved for another customer."
+      "reason": "The question asks whether a product issue is known and whether it was resolved for another customer."
     }
   },
   {
@@ -84,7 +84,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "For a remote pincode, delivery takes **5–9 business days**. Delivery is free for orders of **Rs 499 or more**; orders below Rs 499 have a **Rs 49** delivery charge. This policy is effective from 1 July 2026.",
+    "answer": "Remote pincodes take 5–9 business days. Standard delivery charges apply: orders of Rs 499 or more are delivered free; orders below Rs 499 incur a Rs 49 delivery charge. These policies are dated 1 July 2026.",
     "retrieved_document_ids": [
       "SH-002",
       "SH-001",
@@ -106,7 +106,7 @@
       "indexes": [
         "policy_index"
       ],
-      "reason": "The question asks about delivery times to a remote pincode and free shipping."
+      "reason": "The question asks about remote-pincode delivery times and free shipping."
     }
   },
   {
@@ -121,7 +121,7 @@
       "order_index",
       "ticket_index"
     ],
-    "answer": "Once an order has shipped, Dandes Electronics cannot change the delivery address. The customer can ask the courier to reschedule delivery to the same address, or refuse the delivery and place a new order with the correct address. If they refuse delivery, the refund is processed under policy SH-005.\n\nA resolved case is documented for a shipped Sony WH-1000XM5 order: the customer refused delivery, placed a new order with the correct address, and received a refund for the first order after the package reached the warehouse.",
+    "answer": "Under the official order-change policy effective 1 July 2026, the delivery address cannot be changed by Dandes or Support once the order has shipped. The customer can ask the courier to reschedule delivery to the same address, or refuse the delivery and place a new order with the correct address. A refund for a refused delivery follows the applicable refusal policy.\n\nThere is a resolved case involving a shipped Sony WH-1000XM5 order: the customer refused delivery, placed a new order with the correct address, and the first-order refund was issued after the package reached the warehouse.",
     "retrieved_document_ids": [
       "OG-002",
       "TCK-1004",
@@ -145,7 +145,7 @@
         "order_index",
         "ticket_index"
       ],
-      "reason": "The question asks about changing an address after shipping and a resolved case like this."
+      "reason": "The question asks for the process to change an address after shipping and whether a similar case was resolved."
     }
   },
   {
@@ -158,7 +158,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "Policy RR-004, effective 1 July 2026, explains refund timelines. Refunds begin after the returned product passes the quality check:\n\n- UPI and wallet: 1–3 business days.\n- Credit or debit card and net banking: 5–7 business days.\n- Cash on Delivery: 5–7 business days after you add bank details on the Orders page.\n- EMI: refunded to the card, and the bank closes the EMI plan.",
+    "answer": "Policy RR-004, effective 1 July 2026, explains refund timelines. Refunds begin after the returned product passes the quality check:\n\n- UPI and wallet: 1–3 business days.\n- Credit card, debit card, and net banking: 5–7 business days.\n- Cash on Delivery: 5–7 business days after you add your bank details on the Orders page.\n- EMI: refunded to the card; the bank closes the EMI plan.",
     "retrieved_document_ids": [
       "RR-003",
       "RR-005",
@@ -199,7 +199,7 @@
       "order_index",
       "ticket_index"
     ],
-    "answer": "Under the damaged-product policy effective 1 July 2026, report the damage within 48 hours of delivery using **Report a Problem** on the Orders page. Provide photos of the phone and box, plus an unboxing video if available. The phone will be picked up for a quality check. For mobile phones, a refund is available only if a replacement unit is unavailable. RR-005 also says that if the same model is out of stock, the customer may choose a refund or a different colour of that model.\n\nYes. In resolved case **TCK-1002** (11 August 2026), an iPhone 16 arrived with a cracked screen. The customer reported it within 48 hours and provided photos and an unboxing video; after pickup and quality check, a refund was issued because a replacement in the same colour was unavailable.",
+    "answer": "Under the policy effective 1 July 2026, report the damage within **48 hours of delivery** using **Report a Problem** on the Orders page. Provide photos of the phone and box, plus an unboxing video if available. The phone will be picked up for a quality check.\n\nFor phones, a refund is available if a replacement isn’t available. A replacement is normally for the same model and colour; if that model is out of stock, the customer can choose a refund or a different colour. Phone replacement eligibility is within 7 days of delivery, but the damage must be reported within 48 hours.\n\nThere is a resolved example: on 11 August 2026, a customer’s iPhone 16 arrived with a cracked screen. They reported it within 48 hours and provided photos and an unboxing video. After pickup and a quality check confirmed the damage, the same-colour replacement was unavailable, so a full refund was issued to the customer’s credit card.",
     "retrieved_document_ids": [
       "TCK-1002",
       "RR-003",
@@ -225,7 +225,7 @@
         "order_index",
         "ticket_index"
       ],
-      "reason": "The question asks for the official refund process for a damaged phone and a previous resolved refund case."
+      "reason": "The question asks about the official refund policy and process for a damaged phone, as well as a previous resolved refund case."
     }
   },
   {
@@ -242,7 +242,7 @@
         "out_of_scope"
       ],
       "indexes": [],
-      "reason": "The question asks whether Dandes Electronics sells refrigerators, which is outside the available knowledge base."
+      "reason": "The knowledge base does not cover whether Dandes Electronics sells refrigerators."
     }
   },
   {
@@ -255,7 +255,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "No. Cash on Delivery is available only for orders up to Rs 50,000, so a Rs 60,000 laptop must be paid for online. This policy is effective 1 July 2026.",
+    "answer": "No. Under the Cash on Delivery policy effective 1 July 2026, COD is available only for orders up to Rs 50,000. A Rs 60,000 laptop must be paid for online.",
     "retrieved_document_ids": [
       "SH-004",
       "SH-003",
@@ -277,7 +277,7 @@
       "indexes": [
         "policy_index"
       ],
-      "reason": "The question asks about Cash on Delivery availability."
+      "reason": "The question asks about Cash on Delivery eligibility."
     }
   },
   {
@@ -290,7 +290,7 @@
     "expected_indexes": [
       "product_index"
     ],
-    "answer": "Put both earbuds in the case, close the lid for 10 seconds, then reset them using the Galaxy Wearable app or by holding both touchpads for 7 seconds. Pair the earbuds again as a new device.\n\nIf the left earbud still won’t connect after the reset, treat it as defective under RR-003 if it’s within 48 hours of delivery; after that, make a warranty claim. The guidance is dated 1 July 2026.",
+    "answer": "Put both Galaxy Buds3 Pro earbuds in the case and close the lid for 10 seconds. Then reset them using the Galaxy Wearable app or by holding both touchpads for 7 seconds, and pair them again as a new device.\n\nIf the left earbud still will not connect after the reset, the guidance dated 1 July 2026 says to treat it as defective under RR-003 if it’s within 48 hours of delivery; after that, pursue a warranty claim.",
     "retrieved_document_ids": [
       "KI-001",
       "FAQ-011",
@@ -325,7 +325,7 @@
     "expected_indexes": [
       "order_index"
     ],
-    "answer": "After the order ships, track it from the Orders page or use the tracking link sent by SMS or email. Updates may take up to 24 hours to appear. If tracking has not updated for more than 3 business days, support should raise a courier escalation. This guidance is dated 1 July 2026.",
+    "answer": "Customers can track a shipped order on the Orders page or use the tracking link sent by SMS and email. Tracking updates may take up to 24 hours to appear after shipment. If tracking has not updated for more than 3 business days, support should raise a courier escalation.\n\nThis guidance is effective 1 July 2026.",
     "retrieved_document_ids": [
       "OG-003",
       "OG-001",
@@ -362,7 +362,7 @@
       "order_index",
       "policy_index"
     ],
-    "answer": "Under the policy effective 1 July 2026, an order cannot be cancelled once it has shipped. You can refuse delivery instead. The courier will return the package to Dandes Electronics, and a prepaid order receives a full refund once the package reaches the warehouse. The policy does not specify how long the refund takes after that.",
+    "answer": "Once an order has shipped, it cannot be cancelled. You can refuse the delivery instead. The courier may make up to three delivery attempts; after a refusal, the package is returned to Dandes Electronics. For a prepaid order, a full refund is issued once the package reaches the warehouse. No further refund-processing timeline is specified. This policy is effective 1 July 2026.",
     "retrieved_document_ids": [
       "OG-001",
       "SH-005",
@@ -386,7 +386,7 @@
         "order_index",
         "policy_index"
       ],
-      "reason": "The question asks about cancelling an order after shipment and the refund policy for a prepaid order when delivery is refused."
+      "reason": "The question asks about cancelling an order after shipment and the refund policy for a refused prepaid delivery."
     }
   },
   {
@@ -399,7 +399,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "After the returned product passes the quality check, a UPI refund takes **1 to 3 business days** to process. This timeline is under the refund policy effective 1 July 2026.",
+    "answer": "UPI refunds take 1 to 3 business days after the returned product passes the quality check. This policy is effective from 1 July 2026.",
     "retrieved_document_ids": [
       "RR-004",
       "RR-003",
@@ -421,7 +421,7 @@
       "indexes": [
         "policy_index"
       ],
-      "reason": "The question asks about refund timing after a returned product passes the quality check."
+      "reason": "The question asks about refund timing after a return, which is covered by the refund policy."
     }
   },
   {
@@ -436,7 +436,7 @@
       "order_index",
       "policy_index"
     ],
-    "answer": "Report the damage within 48 hours of delivery: open the order on the Orders page and select **Report a Problem**. Upload photos of the item, the box, and the shipping label. An unboxing video is also requested if available. A pickup will be scheduled within 2 business days; after a quality check, a replacement or refund is processed under the applicable policies.",
+    "answer": "Report the damage within 48 hours of delivery: open the order on the Orders page and select **Report a Problem**. Upload photos of the product, the box, and the shipping label. An unboxing video is also helpful if available. Pickup will be scheduled within 2 business days; after a quality check, a replacement or refund is processed under the applicable policies. This process is in the guide dated 1 July 2026.",
     "retrieved_document_ids": [
       "OG-005",
       "OG-004",
@@ -471,7 +471,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "The courier will make up to three delivery attempts. If all three fail, or you refuse the package, it will be returned to Dandes Electronics. For a prepaid order, a full refund is issued once the package reaches the warehouse. A Cash on Delivery order is cancelled. This policy is effective 1 July 2026.",
+    "answer": "Under the delivery policy effective 1 July 2026, the courier makes up to three delivery attempts. If all three fail or you refuse the package, it is returned to Dandes Electronics. For a prepaid order, a full refund is issued once the package reaches the warehouse. A Cash on Delivery order is cancelled.",
     "retrieved_document_ids": [
       "SH-005",
       "RR-003",
@@ -506,7 +506,7 @@
     "expected_indexes": [
       "policy_index"
     ],
-    "answer": "Once the return window has ended, the customer must use the manufacturer warranty. The documents don’t specify how to contact the manufacturer or the warranty claim steps, so check the warranty information supplied with the product or contact the manufacturer.",
+    "answer": "Once the return window has ended, the customer must use the manufacturer’s warranty. Contact the manufacturer to ask how to get the defect assessed and handled. The return policy effective 1 July 2026 applies.",
     "retrieved_document_ids": [
       "RR-001",
       "RR-003",
@@ -528,7 +528,7 @@
       "indexes": [
         "policy_index"
       ],
-      "reason": "The question asks what options are available after the return window has ended."
+      "reason": "The question concerns what options are available after the return window has ended."
     }
   },
   {
@@ -545,7 +545,7 @@
         "out_of_scope"
       ],
       "indexes": [],
-      "reason": "The available knowledge base does not cover whether televisions are sold."
+      "reason": "The available knowledge base does not cover whether Dandes Electronics sells televisions."
     }
   },
   {
@@ -558,7 +558,7 @@
     "expected_indexes": [
       "product_index"
     ],
-    "answer": "Some customers report that one AirPods Pro 2 earbud does not charge in its case. Dirt on the charging contacts is the usual cause.\n\nGently clean the earbud and case contacts with a dry cotton swab, and check that the earbud sits fully in the case. If it still does not charge, raise an Apple warranty claim.",
+    "answer": "Some AirPods Pro 2 customers report that one earbud does not charge in the case. The usual cause is dirt on the charging contacts.\n\nGently clean the earbud and case contacts with a dry cotton swab, then check that the earbud sits fully in the case. If it still does not charge, raise an Apple warranty claim. This guidance is dated 1 July 2026.",
     "retrieved_document_ids": [
       "KI-002",
       "FAQ-009",
@@ -595,7 +595,7 @@
       "product_index",
       "ticket_index"
     ],
-    "answer": "Yes. A customer had the same issue after switching to a new phone; the earbuds were still paired with the old phone. They put both earbuds in the case, closed the lid for 10 seconds, reset them, then paired them again as a new device. Both earbuds worked afterward.\n\nIf the problem continues after resetting, the guidance is to treat it as defective under RR-003 within 48 hours of delivery, or as a warranty claim after that.",
+    "answer": "Yes. A customer reported that the left Galaxy Buds3 Pro earbud stopped connecting after switching to a new phone. The earbuds were still paired with the old phone. The issue was resolved by resetting both earbuds in the case and pairing them again as a new device; both worked afterward.\n\nThe recommended reset is to place both earbuds in the case, close the lid for 10 seconds, then reset them in the Galaxy Wearable app or hold both touchpads for 7 seconds before pairing again.",
     "retrieved_document_ids": [
       "TCK-1001",
       "KI-001",
@@ -636,7 +636,7 @@
         "out_of_scope"
       ],
       "indexes": [],
-      "reason": "The question asks whether Dandes Electronics sells washing machines, which is outside the available knowledge base."
+      "reason": "The question asks about product availability, which is outside the available knowledge base."
     }
   },
   {
@@ -653,7 +653,7 @@
         "out_of_scope"
       ],
       "indexes": [],
-      "reason": "The available knowledge base does not cover whether Dandes Electronics sells microwaves."
+      "reason": "The available knowledge base does not say whether Dandes Electronics sells microwaves."
     }
   }
 ]

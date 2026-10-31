@@ -1,3 +1,4 @@
+
 # INSTALLATION / RUN NOTES (Windows CMD)
 # Activate .venv and install requirements.txt before running application scripts.
 # Run this offline test file from the project root with:
@@ -7,8 +8,10 @@
 
 Run from the repository root with:
     python -m unittest discover -s tests -v
+
 These tests do not call an LLM API or create a Chroma database.
 """
+
 import json
 import unittest
 from collections import Counter
@@ -18,9 +21,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ProjectIntegrityTests(unittest.TestCase):
+
     def test_required_project_files_exist(self):
         required = [
-            "README.md", "requirements.txt", ".gitignore",
+            "README.md",
+            "requirements.txt",
+            ".gitignore",
             "data/dandes_electronics_kb.json",
             "evaluation/golden_test_set.json",
             "v1_basic_rag/1_offline_pipeline.py",
@@ -34,68 +40,223 @@ class ProjectIntegrityTests(unittest.TestCase):
             "evaluation/3_generation_metrics.py",
             "evaluation/4_comparison_table.py",
         ]
-        missing = [item for item in required if not (ROOT / item).is_file()]
-        self.assertEqual(missing, [], f"Missing required project files: {missing}")
+
+        missing = [
+            item for item in required
+            if not (ROOT / item).is_file()
+        ]
+
+        self.assertEqual(
+            missing,
+            [],
+            f"Missing required project files: {missing}"
+        )
 
     def test_dataset_json_and_document_count(self):
-        payload = json.loads((ROOT / "data/dandes_electronics_kb.json").read_text(encoding="utf-8"))
+        dataset_path = ROOT / "data/dandes_electronics_kb.json"
+
+        payload = json.loads(
+            dataset_path.read_text(encoding="utf-8")
+        )
+
         docs = payload.get("documents")
+
         self.assertIsInstance(docs, list)
         self.assertEqual(len(docs), 50)
-        self.assertEqual(len({doc.get("id") for doc in docs}), 50, "Document IDs must be unique")
+
+        document_ids = {
+            doc.get("id") for doc in docs
+        }
+
+        self.assertEqual(
+            len(document_ids),
+            50,
+            "Document IDs must be unique"
+        )
 
     def test_required_document_fields_and_metadata(self):
-        payload = json.loads((ROOT / "data/dandes_electronics_kb.json").read_text(encoding="utf-8"))
-        required_meta = {"product", "brand", "category", "policy_code", "date", "related_policy"}
+        dataset_path = ROOT / "data/dandes_electronics_kb.json"
+
+        payload = json.loads(
+            dataset_path.read_text(encoding="utf-8")
+        )
+
+        required_meta = {
+            "product",
+            "brand",
+            "category",
+            "policy_code",
+            "date",
+            "related_policy",
+        }
+
         for i, doc in enumerate(payload["documents"]):
-            with self.subTest(document=i, doc_id=doc.get("id")):
+
+            with self.subTest(
+                document=i,
+                doc_id=doc.get("id")
+            ):
                 self.assertTrue(doc.get("id"))
                 self.assertTrue(doc.get("doc_type"))
                 self.assertTrue(doc.get("title"))
                 self.assertTrue(doc.get("content"))
-                self.assertIsInstance(doc.get("metadata"), dict)
-                self.assertTrue(required_meta.issubset(doc["metadata"].keys()))
+
+                self.assertIsInstance(
+                    doc.get("metadata"),
+                    dict
+                )
+
+                self.assertTrue(
+                    required_meta.issubset(
+                        doc["metadata"].keys()
+                    ),
+                    f"Missing metadata in document {doc.get('id')}"
+                )
 
     def test_expected_document_type_distribution(self):
-        payload = json.loads((ROOT / "data/dandes_electronics_kb.json").read_text(encoding="utf-8"))
-        counts = Counter(doc["doc_type"] for doc in payload["documents"])
-        self.assertEqual(counts, {
+        dataset_path = ROOT / "data/dandes_electronics_kb.json"
+
+        payload = json.loads(
+            dataset_path.read_text(encoding="utf-8")
+        )
+
+        counts = Counter(
+            doc["doc_type"]
+            for doc in payload["documents"]
+        )
+
+        expected_counts = {
             "product_faq": 12,
             "return_policy": 5,
             "shipping_policy": 5,
             "order_guide": 6,
             "known_issue": 8,
             "resolved_ticket": 14,
-        })
+        }
+
+        self.assertEqual(
+            counts,
+            expected_counts
+        )
 
     def test_golden_test_set_has_twenty_questions(self):
-        questions = json.loads((ROOT / "evaluation/golden_test_set.json").read_text(encoding="utf-8"))
+        golden_path = ROOT / "evaluation/golden_test_set.json"
+
+        questions = json.loads(
+            golden_path.read_text(encoding="utf-8")
+        )
+
         self.assertEqual(len(questions), 20)
-        required = {"id", "question", "reference_answer", "expected_sources"}
-        for q in questions:
-            self.assertTrue(required.issubset(q.keys()), f"Question missing fields: {q.get('id')}")
+
+        required_fields = {
+            "id",
+            "question",
+            "reference_answer",
+            "expected_sources",
+        }
+
+        for question in questions:
+
+            self.assertTrue(
+                required_fields.issubset(question.keys()),
+                f"Question missing fields: {question.get('id')}"
+            )
 
     def test_gitignore_excludes_secrets_and_local_artifacts(self):
-        ignore = (ROOT / ".gitignore").read_text(encoding="utf-8")
-        for entry in [".env", ".venv/", ".venv_ragas/", "chroma_db/", "__pycache__/", "*.pyc"]:
-            self.assertIn(entry, ignore)
+        gitignore_path = ROOT / ".gitignore"
+
+        ignore = gitignore_path.read_text(
+            encoding="utf-8"
+        )
+
+        required_entries = [
+            ".env",
+            ".venv/",
+            ".venv_ragas/",
+            "chroma_db/",
+            "__pycache__/",
+            "*.pyc",
+        ]
+
+        for entry in required_entries:
+
+            with self.subTest(entry=entry):
+                self.assertIn(
+                    entry,
+                    ignore
+                )
 
     def test_all_python_files_have_install_notes(self):
-        scripts = list(ROOT.rglob("*.py"))
-        self.assertGreaterEqual(len(scripts), 17)
+
+        # Exclude virtual environments and generated cache folders.
+        # These contain third-party Python files, not our project scripts.
+        excluded_dirs = {
+            ".venv",
+            ".venv_ragas",
+            "__pycache__",
+        }
+
+        scripts = [
+            script
+            for script in ROOT.rglob("*.py")
+            if not any(
+                part in excluded_dirs
+                for part in script.relative_to(ROOT).parts
+            )
+        ]
+
+        self.assertGreaterEqual(
+            len(scripts),
+            17,
+            "Expected at least 17 project Python scripts"
+        )
+
         for script in scripts:
-            with self.subTest(script=str(script.relative_to(ROOT))):
-                first = script.read_text(encoding="utf-8").lstrip()
-                self.assertTrue(first.startswith("# INSTALLATION / RUN NOTES"), "Missing setup comments")
+
+            with self.subTest(
+                script=str(script.relative_to(ROOT))
+            ):
+
+                first = script.read_text(
+                    encoding="utf-8"
+                ).lstrip()
+
+                self.assertTrue(
+                    first.startswith(
+                        "# INSTALLATION / RUN NOTES"
+                    ),
+                    f"Missing setup comments in {script.relative_to(ROOT)}"
+                )
 
     def test_results_files_are_valid_json_when_present(self):
         result_dir = ROOT / "evaluation/results"
-        self.assertTrue(result_dir.is_dir())
-        result_files = list(result_dir.glob("*.json"))
-        self.assertGreaterEqual(len(result_files), 5)
+
+        self.assertTrue(
+            result_dir.is_dir(),
+            "Evaluation results directory does not exist"
+        )
+
+        result_files = list(
+            result_dir.glob("*.json")
+        )
+
+        self.assertGreaterEqual(
+            len(result_files),
+            5,
+            "Expected at least 5 evaluation JSON result files"
+        )
+
         for result_file in result_files:
-            with self.subTest(file=result_file.name):
-                json.loads(result_file.read_text(encoding="utf-8"))
+
+            with self.subTest(
+                file=result_file.name
+            ):
+
+                json.loads(
+                    result_file.read_text(
+                        encoding="utf-8"
+                    )
+                )
 
 
 if __name__ == "__main__":
